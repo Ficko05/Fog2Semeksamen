@@ -16,11 +16,11 @@ public class Connector {
     public static Connection connection() throws SQLException {
         if (singleton == null) {
             MysqlDataSource source = new MysqlDataSource();
-            source.setServerName("159.89.23.227");
+            source.setServerName("159.89.10.139");
             source.setPort(3306);
-            source.setDatabaseName("lego");
-            source.setUser("jollys");
-            source.setPassword("google2018");
+            source.setDatabaseName("Fog");
+            source.setUser("susteven");
+            source.setPassword("asdfghjklæø");
             singleton = source.getConnection();
         }
         return singleton;
