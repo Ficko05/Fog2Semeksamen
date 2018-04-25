@@ -24,6 +24,6 @@ public class Connector {
             singleton = source.getConnection();
         }
         return singleton;
-    }
-
+    } 
+    
 }
