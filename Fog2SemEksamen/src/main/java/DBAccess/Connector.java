@@ -10,15 +10,15 @@ public class Connector {
 
     private static Connection singleton;
     
-    public static void main(String[] args) throws SQLException {
-         Connection con = Connector.connection();
-            String SQL = "Select * From customer";
-            ResultSet rs =con.prepareStatement(SQL).executeQuery();
-            if(rs.next()){
-                System.out.println(rs.getString("username"));
-            }
-    
-    }
+//    public static void main(String[] args) throws SQLException {
+//         Connection con = Connector.connection();
+//            String SQL = "Select * From customer";
+//            ResultSet rs =con.prepareStatement(SQL).executeQuery();
+//            if(rs.next()){
+//                System.out.println(rs.getString("username"));
+//            }
+//    
+//    }
     
 /*this mothod connects to the server/droplet */
     public static Connection connection() throws SQLException {
