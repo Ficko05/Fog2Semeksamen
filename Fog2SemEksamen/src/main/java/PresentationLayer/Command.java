@@ -1,6 +1,6 @@
 package PresentationLayer;
 
-//import database.FunctionLayer.LoginSampleException;
+
 import FunctionLayer.exceptions.LoginSampleException;
 import FunctionLayer.exceptions.OrderException;
 import java.io.IOException;
@@ -17,7 +17,7 @@ abstract class Command {
     private static void initCommands() {
         commands = new HashMap<>();
         commands.put( "login", new LoginCommand() );
-        
+        commands.put( "CustomerPage" , new CustomerCommand() );
        
     }
 

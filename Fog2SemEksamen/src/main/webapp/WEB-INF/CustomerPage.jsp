@@ -8,18 +8,24 @@
     <body>
         <h1>Hello World!</h1>
         
-        <%@include file="../includes/menu.jsp" %>
-        <h1>Hello World!</h1>
-        <p>your length ${length}</p>
-        <p>your Width ${width}</p>
-        <p>your Height ${height}</p>
+        
+        
+        
         
 
-        <form name="CustomerPage" action="FrontController" method="post">
-               <input type="hidden" name="command" value="InputPage">
-            
-            
-            <input type="submit" name="submit" />
-         </form>
+                                <form name="CustomerPage" action="FrontController" method="post">
+                                
+                                <input type="hidden" name="command" value="CustomerPage" />
+                                
+                                <input type="text" name="længde"  placeholder="længde" />
+                                
+                                <input type="text" name="bredde"  placeholder="bredde" />
+                                
+                                <input type="text" name="højde" placeholder="højde" />
+                                <br/><br/>
+                                <div class="buttonHolder">
+                                <input type="submit" value="CustomerPage" />
+                                </div>
+                            </form>
     </body>
 </html>
