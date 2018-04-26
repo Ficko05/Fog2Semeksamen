@@ -21,7 +21,7 @@ public class Connector {
 //    }
     
 /*this mothod connects to the server/droplet */
-    public static Connection connection() throws SQLException {
+    public static Connection connection() throws ClassNotFoundException, SQLException {
         if (singleton == null) {
             MysqlDataSource source = new MysqlDataSource();
             source.setServerName("159.89.10.139");
