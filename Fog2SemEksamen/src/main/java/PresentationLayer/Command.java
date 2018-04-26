@@ -1,6 +1,8 @@
 package PresentationLayer;
 
 //import database.FunctionLayer.LoginSampleException;
+import FunctionLayer.exceptions.LoginSampleException;
+import FunctionLayer.exceptions.OrderException;
 import java.io.IOException;
 import java.util.HashMap;
 import javax.servlet.ServletException;
@@ -14,7 +16,7 @@ abstract class Command {
     /* */
     private static void initCommands() {
         commands = new HashMap<>();
-        //commands.put( "login", new LoginCommand() );
+        commands.put( "login", new LoginCommand() );
         
        
     }
@@ -27,7 +29,7 @@ abstract class Command {
         return commands.getOrDefault(commandName, new UnknownCommand() );
     }
 
-    abstract void execute( HttpServletRequest request, HttpServletResponse response ) 
-            throws ServletException, IOException;
+    abstract String execute( HttpServletRequest request, HttpServletResponse response ) 
+            throws ServletException, IOException, LoginSampleException, OrderException;
 
 }

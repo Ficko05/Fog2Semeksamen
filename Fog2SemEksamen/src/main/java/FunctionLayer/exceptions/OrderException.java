@@ -1,5 +1,5 @@
 
-package FunctionLayer;
+package FunctionLayer.exceptions;
 
 public class OrderException extends Exception{
 
