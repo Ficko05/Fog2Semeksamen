@@ -7,10 +7,10 @@
     </head>
     <body>
         <h1>Hello World!</h1>
+        
+          <form name="CustomerPage" action="FrontController" method="post">
 
-        <form name="CustomerPage" action="FrontController" method="post">
-
-            <input type="hidden" name="command" value="CustomerPage" />
+            <input type="hidden" name="command" value="EmployeePage" />
 
 
             <br/><br/>
@@ -18,5 +18,6 @@
                 <input type="submit" value="CustomerPage" />
             </div>
         </form>
+        
     </body>
 </html>
