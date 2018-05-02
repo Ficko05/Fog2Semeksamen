@@ -23,6 +23,7 @@ public class FrontController extends HttpServlet {
             request.setAttribute("error", ex.getMessage());
             request.getRequestDispatcher("index.jsp").forward(request, response);
         }
+ 
     }
 
     @Override

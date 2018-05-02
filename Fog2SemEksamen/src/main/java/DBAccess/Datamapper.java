@@ -12,41 +12,58 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import FunctionLayer.User;
+import java.sql.Date;
+import java.sql.Timestamp;
+import java.text.DateFormat;
 
 
 public class Datamapper {
    
     /**puts values into OrderDB*/
-    public static void createOrder (Order order, User user) throws OrderException{
+    public static void createOrder (User user, Order order) throws OrderException{
         try {
             Connection con = Connector.connection();
-            String SQL = "INSERT INTO Order (customer_id, height, length, width, tag_id, shed_id, customer comment, status, type) VALUES (?, ?, ?, ?, ?, ?)";
+            String SQL = "INSERT INTO order (height, length, width) VALUES (?, ?, ?)";
             PreparedStatement ps = con.prepareStatement( SQL, Statement.RETURN_GENERATED_KEYS );
-            ps.setInt( 1, user.getId());
+//            ps.setInt( 1, user.getId());
+            ps.setInt( 1, order.getHeight());
             ps.setInt( 2, order.getLength());
             ps.setInt( 3, order.getWidth());
+//            ps.setInt( 5, order.getTag_id());
+//            ps.setInt( 6, shed_id);
+//            ps.setString( 7, user.getComment());
+//            ps.setString( 6, status);
+//            ps.setInt( 8, type);
+            
             ps.executeUpdate();
             } catch ( SQLException | ClassNotFoundException ex ) {
             throw new OrderException(ex.getMessage() );
             }
     }
-//    
-    public static List<Order> getOrders(User user) throws OrderException{
+
+
+
+    public static List<Order> allOrders() throws OrderException{
            List<Order> orderList = new ArrayList<>();
         try {
             Connection con = Connector.connection();
-            String SQL = "SELECT * FROM orderlist where user_id = ?";
+            String SQL = "SELECT * FROM order";
             PreparedStatement ps = con.prepareStatement(SQL);
-            ps.setInt(1, user.getId());
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
                 int id = rs.getInt("id");
+                int customer_id = rs.getInt("customer_id");
+                int height = rs.getInt("height");
                 int length = rs.getInt("length");
                 int width = rs.getInt("width");
-                int height = rs.getInt("height");
+                int roof_id = rs.getInt("roof_id");
+                int roof_angle = rs.getInt("roof_angle");
+                int shed_id = rs.getInt("shed_id");
+                String customer_comment = rs.getString("customer_comment");
                 String status = rs.getString("status");
-                int user_id = rs.getInt("user_id");
-                Order order = new Order(length, width, height);
+                Date date = rs.getDate("date");
+                String type = rs.getString("type");
+                Order order = new Order(customer_id, length, width, height, roof_id, roof_angle, shed_id, customer_comment, status, date, type);
                 orderList.add(order);
             }
             return orderList;
@@ -56,7 +73,28 @@ public class Datamapper {
         
         
     }
-//    
+    
+//    /** rigtige løsning på CreateOrder når man kan logge ind*/
+//    public static int customerById( User user ) throws OrderException, ClassNotFoundException
+//    {
+//        String username = user.getUsername();
+//        final String SQL = "Select * FROM customer WHERE username=?";
+//        try(PreparedStatement statement = Connector.connection().prepareStatement(SQL)) 
+//        {
+//            statement.setString(1, username);
+//            ResultSet rs = statement.executeQuery();
+//            if(rs.next()) {
+//                int idUser = rs.getInt("id");
+//                return idUser;
+//            }
+//            throw new SQLException();
+//        } catch (SQLException | ClassNotFoundException throwSql) {
+//            throw new OrderException(throwSql.getMessage());
+//        }
+//    }
+
+
+
     public static void createUser( User user ) throws LoginSampleException {
         try {
             Connection con = Connector.connection();
@@ -79,16 +117,18 @@ public class Datamapper {
     public static User login( String email, String password ) throws LoginSampleException {
         try {
             Connection con = Connector.connection();
-            String SQL = "SELECT id, role FROM users "
+            String SQL = "SELECT id FROM users "
                     + "WHERE email=? AND password=?";
             PreparedStatement ps = con.prepareStatement( SQL );
             ps.setString( 1, email );
             ps.setString( 2, password );
             ResultSet rs = ps.executeQuery();
             if ( rs.next() ) {
-                String role = rs.getString( "role" );
+                String username = rs.getString("username");
+                String comment = rs.getString( "comment" );
                 int id = rs.getInt( "id" );
-                User user = new User( role, password, email, id, id);
+                int phone = rs.getInt( "phone" );
+                User user = new User(username, password, email, id, phone, comment);
                 user.setId(id );
                 return user;
             } else {

@@ -18,7 +18,9 @@ abstract class Command {
         commands = new HashMap<>();
         commands.put( "login", new LoginCommand() );
         commands.put( "CustomerPage" , new CustomerCommand() );
-       
+        commands.put( "createOrder" , new CreateOrder());
+        commands.put( "register" , new Register());
+        
     }
 
     static Command from( HttpServletRequest request ) {
@@ -30,6 +32,6 @@ abstract class Command {
     }
 
     abstract String execute( HttpServletRequest request, HttpServletResponse response ) 
-            throws ServletException, IOException, LoginSampleException, OrderException;
+            throws ServletException, IOException, LoginSampleException, OrderException, ClassNotFoundException;
 
 }

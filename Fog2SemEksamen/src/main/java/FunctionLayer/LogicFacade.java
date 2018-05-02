@@ -19,13 +19,18 @@ public class LogicFacade {
         return user;
     }
     
-      public static List<Order> getOrders(User user) throws OrderException {
-        return Datamapper.getOrders(user);
+      public static List<Order> allOrders() throws OrderException {
+        return Datamapper.allOrders();
     
       }
       
-    public static void createOrder(Order order, int user_id) throws OrderException{
-         Datamapper.createOrder(order, user_id);
+//    public static int customerById( User customer ) throws OrderException, ClassNotFoundException 
+//    {
+//        return Datamapper.customerById( customer );
+//    }
+      
+    public static void createOrder(User user, Order order) throws OrderException{
+         Datamapper.createOrder(user, order);
     }
     
     

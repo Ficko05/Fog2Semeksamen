@@ -12,8 +12,12 @@
                 <table>
                     <tr>
                         <td>
-                            <form action="FrontController" method="POST">
-                                <input type="hidden" name="command" value="input"> 
+                            <form      action="FrontController" method="POST">
+                                <input type="hidden" name="command" value="createOrder"> 
+                                <br/>
+                                Height:
+                                <br/>
+                                <input type="number" name="height" value="1" min="1" >
                                 <br/>
                                 Length:
                                 <br/>
@@ -21,11 +25,7 @@
                                 <br/>
                                 Width:
                                 <br/>
-                                <input type="number" name="width" value="1" min="1" >
-                                <br/>
-                                Heigth:
-                                <br/>
-                                <input type="number" name="heigth" value="1" min="1" > 
+                                <input type="number" name="width" value="1" min="1" > 
                                 <br/>
                                 <input type="submit" value="submit">
                             </form>
