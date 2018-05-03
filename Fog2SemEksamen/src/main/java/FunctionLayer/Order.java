@@ -2,6 +2,7 @@
 package FunctionLayer;
 
 import java.sql.Date;
+import java.sql.Timestamp;
 
 
 public class Order {
@@ -9,9 +10,9 @@ public class Order {
         
    private int id,customer_id, length, width, height, roof_id, roof_angle, shed_id;
    private String customer_comment, status, type;
-   private Date date;
+   private String date;
 
-    public Order(int id, int customer_id, int length, int width, int height, int roof_id, int roof_angle, int shed_id, String customer_comment, String status, Date date, String type) {
+    public Order(int id, int customer_id, int length, int width, int height, int roof_id, int roof_angle, int shed_id, String customer_comment, String status, String date, String type) {
         this.id = id;
         this.customer_id = customer_id;
         this.length = length;
@@ -109,11 +110,11 @@ public class Order {
         this.type = type;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date = date;
     }
 

@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 import FunctionLayer.Customer;
 import java.sql.Date;
+import java.sql.Timestamp;
 
 
 public class Datamapper {
@@ -63,7 +64,7 @@ public class Datamapper {
                 int shed_id = rs.getInt("shed_id");
                 String customer_comment = rs.getString("customer_comment");
                 String status = rs.getString("status");
-                Date date = rs.getDate("date");
+                String date = rs.getString("date");
                 String type = rs.getString("type");
                 Order order = new Order(id, customer_id, length, width, height, roof_id, roof_angle, shed_id, customer_comment, status, date, type);
                 orderList.add(order);
