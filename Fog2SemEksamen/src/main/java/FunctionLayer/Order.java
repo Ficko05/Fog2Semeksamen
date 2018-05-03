@@ -25,15 +25,12 @@ public class Order {
         this.type = type;
     }
     
-    public Order(int length, int width, int height, int roof_id, int roof_angle, int shed_id,String customer_comment, String type){
+    /**quick fix */
+    public Order(int length, int width, int height, int roof_id){
         this.length = length;
         this.width = width;
         this.height = height;
         this.roof_id = roof_id;
-        this.roof_angle = roof_angle;
-        this.shed_id = shed_id;
-        this.customer_comment = customer_comment;
-        this.type = type;
     }
 
     public int getId() {
@@ -136,6 +133,7 @@ public class Order {
         this.shed_id = shed_id;
     }
 
+    
     @Override
     public String toString() {
         return "Order{" + "id=" + id + ", length=" + length + ", width=" + width + ", height=" + height + ", roof_id=" + roof_id + ", roof_angle=" + roof_angle + ", shed_id=" + shed_id + ", customer_comment=" + customer_comment + ", status=" + status + ", type=" + type + ", date=" + date + '}';

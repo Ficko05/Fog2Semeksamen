@@ -13,7 +13,7 @@
                 <tr>
                     <td>
                         <form      action="FrontController" method="POST">
-                            <input type="hidden" name="command" value="createOrder"> 
+                            <input type="hidden" name="command" value="CreateOrderPage"> 
                             <br/>
                             Height:
                             <br/>
@@ -31,15 +31,8 @@
                             <br/>
                             <input type="number" name="roof_id" value="1" min="1" > 
                             <br>
-                            roof_angle:
-                            <br/>
-                            <input type="number" name="roof_angle" value="1" min="1" > 
-                            <br>
-                            shed_id:
-                            <br/>
-                            <input type="number" name="shed_id" value="1" min="1" > 
-                            <br/>
                             <input type="submit" value="submit">
+                            <br/>
                         </form>
                     </td>
                 </tr>

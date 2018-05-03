@@ -11,27 +11,31 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-import FunctionLayer.User;
+import FunctionLayer.customer;
 import java.sql.Date;
 
 
 public class Datamapper {
    
     /**puts values into OrderDB*/
-    public static void createOrder (User user, Order order) throws OrderException{
+    public static void createOrder (Order order) throws OrderException{
         try {
             Connection con = Connector.connection();
-            String SQL = "INSERT INTO order (height, length, width) VALUES (?, ?, ?)";
+            String SQL = "INSERT INTO `order` (customer_id, height, length, width, roof_id) VALUES (?, ?, ?, ?, ?)";
             PreparedStatement ps = con.prepareStatement( SQL, Statement.RETURN_GENERATED_KEYS );
-//            ps.setInt( 1, user.getId());
-            ps.setInt( 1, order.getHeight());
-            ps.setInt( 2, order.getLength());
-            ps.setInt( 3, order.getWidth());
-//            ps.setInt( 5, order.getTag_id());
-//            ps.setInt( 6, shed_id);
-//            ps.setString( 7, user.getComment());
-//            ps.setString( 6, status);
-//            ps.setInt( 8, type);
+            int height = order.getHeight();
+            int length = order.getLength();
+            int width = order.getWidth();
+            int roofId = order.getRoof_id();
+            ps.setInt( 1, 1);
+            ps.setInt( 2, height);
+            ps.setInt( 3, length);
+            ps.setInt( 4, width);
+            ps.setInt( 5, roofId);
+//            ps.setInt( 6, order.getShed_id());
+//            ps.setString( 7, order.getCustomer_comment());
+//            ps.setString( 7, order.getStatus());
+//            ps.setString( 8, order.getType());
             
             ps.executeUpdate();
             } catch ( SQLException | ClassNotFoundException ex ) {
@@ -93,7 +97,7 @@ public class Datamapper {
 
 
 
-    public static void createUser( User user ) throws LoginSampleException {
+    public static void createUser( customer user ) throws LoginSampleException {
         try {
             Connection con = Connector.connection();
             String SQL = "INSERT INTO customer (username, password, email, phone) VALUES (?, ?, ?, ?)";
@@ -112,7 +116,7 @@ public class Datamapper {
         }
     }
     
-    public static User login( String email, String password ) throws LoginSampleException {
+    public static customer login( String email, String password ) throws LoginSampleException {
         try {
             Connection con = Connector.connection();
             String SQL = "SELECT id FROM users "
@@ -126,7 +130,7 @@ public class Datamapper {
                 String comment = rs.getString( "comment" );
                 int id = rs.getInt( "id" );
                 int phone = rs.getInt( "phone" );
-                User user = new User(username, password, email, id, phone, comment);
+                customer user = new customer(username, password, email, id, phone, comment);
                 user.setId(id );
                 return user;
             } else {
