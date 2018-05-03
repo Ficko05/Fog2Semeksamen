@@ -10,7 +10,7 @@ public class EmployeeCommand extends Command{
     
      @Override
      String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-            return "OrdreOversigt";
+            return "EmployeePage";
 //        try {
          //  request.getRequestDispatcher("/WEB-INF/CustomerPage.jsp").forward(request, response);
 //        } catch (Exception e) {

@@ -10,7 +10,7 @@
         
           <form name="CustomerPage" action="FrontController" method="post">
 
-            <input type="hidden" name="command" value="EmployeePage" />
+            <input type="hidden" name="command" value="ShowOrders" />
 
 
             <br/><br/>

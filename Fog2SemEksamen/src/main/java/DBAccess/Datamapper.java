@@ -65,7 +65,7 @@ public class Datamapper {
                 String status = rs.getString("status");
                 Date date = rs.getDate("date");
                 String type = rs.getString("type");
-                Order order = new Order(customer_id, length, width, height, roof_id, roof_angle, shed_id, customer_comment, status, date, type);
+                Order order = new Order(id, customer_id, length, width, height, roof_id, roof_angle, shed_id, customer_comment, status, date, type);
                 orderList.add(order);
             }
             return orderList;

@@ -11,7 +11,8 @@ public class Order {
    private String customer_comment, status, type;
    private Date date;
 
-    public Order(int customer_id, int length, int width, int height, int roof_id, int roof_angle, int shed_id, String customer_comment, String status, Date date, String type) {
+    public Order(int id, int customer_id, int length, int width, int height, int roof_id, int roof_angle, int shed_id, String customer_comment, String status, Date date, String type) {
+        this.id = id;
         this.customer_id = customer_id;
         this.length = length;
         this.width = width;
@@ -133,11 +134,13 @@ public class Order {
         this.shed_id = shed_id;
     }
 
-    
     @Override
     public String toString() {
-        return "Order{" + "id=" + id + ", length=" + length + ", width=" + width + ", height=" + height + ", roof_id=" + roof_id + ", roof_angle=" + roof_angle + ", shed_id=" + shed_id + ", customer_comment=" + customer_comment + ", status=" + status + ", type=" + type + ", date=" + date + '}';
+        return "Order{" + "id=" + id + ", customer_id=" + customer_id + ", length=" + length + ", width=" + width + ", height=" + height + ", roof_id=" + roof_id + ", roof_angle=" + roof_angle + ", shed_id=" + shed_id + ", customer_comment=" + customer_comment + ", status=" + status + ", type=" + type + ", date=" + date + '}';
     }
+
+    
+   
    
     
 }
