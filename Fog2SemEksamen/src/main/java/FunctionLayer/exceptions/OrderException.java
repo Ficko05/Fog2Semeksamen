@@ -7,5 +7,9 @@ public class OrderException extends Exception{
         super(msg);
     }
     
+    public OrderException(Throwable throwException) {
+        super(throwException);
+    }
+    
     
 }
