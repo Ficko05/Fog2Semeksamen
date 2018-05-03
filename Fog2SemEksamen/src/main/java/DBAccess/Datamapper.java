@@ -11,7 +11,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-import FunctionLayer.customer;
+import FunctionLayer.Customer;
 import java.sql.Date;
 
 
@@ -49,7 +49,7 @@ public class Datamapper {
            List<Order> orderList = new ArrayList<>();
         try {
             Connection con = Connector.connection();
-            String SQL = "SELECT * FROM order";
+            String SQL = "SELECT * FROM `order`";
             PreparedStatement ps = con.prepareStatement(SQL);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
@@ -97,7 +97,7 @@ public class Datamapper {
 
 
 
-    public static void createUser( customer user ) throws LoginSampleException {
+    public static void createUser( Customer user ) throws LoginSampleException {
         try {
             Connection con = Connector.connection();
             String SQL = "INSERT INTO customer (username, password, email, phone) VALUES (?, ?, ?, ?)";
@@ -116,7 +116,7 @@ public class Datamapper {
         }
     }
     
-    public static customer login( String email, String password ) throws LoginSampleException {
+    public static Customer login( String email, String password ) throws LoginSampleException {
         try {
             Connection con = Connector.connection();
             String SQL = "SELECT id FROM users "
@@ -130,7 +130,7 @@ public class Datamapper {
                 String comment = rs.getString( "comment" );
                 int id = rs.getInt( "id" );
                 int phone = rs.getInt( "phone" );
-                customer user = new customer(username, password, email, id, phone, comment);
+                Customer user = new Customer(username, password, email, id, phone, comment);
                 user.setId(id );
                 return user;
             } else {

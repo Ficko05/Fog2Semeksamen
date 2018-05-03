@@ -2,13 +2,13 @@
 package FunctionLayer;
 
 
-public class customer {
+public class Customer {
     
     private String username, password, email;
     private int id, phone;
     private String comment;
 
-    public customer(String username, String password, String email, int id, int phone, String comment) {
+    public Customer(String username, String password, String email, int id, int phone, String comment) {
         this.username = username;
         this.password = password;
         this.email = email;

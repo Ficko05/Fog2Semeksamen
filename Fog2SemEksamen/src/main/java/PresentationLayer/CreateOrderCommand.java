@@ -3,7 +3,7 @@ package PresentationLayer;
 
 import FunctionLayer.LogicFacade;
 import FunctionLayer.Order;
-import FunctionLayer.customer;
+import FunctionLayer.Customer;
 import FunctionLayer.exceptions.LoginSampleException;
 import FunctionLayer.exceptions.OrderException;
 import javax.servlet.http.HttpServletRequest;

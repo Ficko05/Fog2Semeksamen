@@ -9,12 +9,12 @@ import java.util.List;
 
 public class LogicFacade {
 
-    public static customer login( String email, String password ) throws LoginSampleException {
+    public static Customer login( String email, String password ) throws LoginSampleException {
         return Datamapper.login( email, password );
     } 
 
-    public static customer createUser( String email, String password ) throws LoginSampleException {
-        customer user = new customer(email, password, email, 0, 0, email);
+    public static Customer createUser( String email, String password ) throws LoginSampleException {
+        Customer user = new Customer(email, password, email, 0, 0, email);
         Datamapper.createUser( user );
         return user;
     }
