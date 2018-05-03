@@ -6,10 +6,10 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>odre oversigt</h1>
         
-        <%=  %>
+  
            
-        <p>neger</p>
+        <p>hey</p>
     </body>
 </html>

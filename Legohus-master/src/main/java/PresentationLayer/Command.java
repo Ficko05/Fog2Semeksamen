@@ -1,11 +1,9 @@
 package PresentationLayer;
 
-
-import FunctionLayer.exceptions.LoginSampleException;
-import FunctionLayer.exceptions.OrderException;
-import java.io.IOException;
+import FunctionLayer.Calculate;
+import FunctionLayer.LoginSampleException;
+import FunctionLayer.OrderException;
 import java.util.HashMap;
-import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -13,17 +11,17 @@ abstract class Command {
 
     private static HashMap<String, Command> commands;
 
-    /* */
     private static void initCommands() {
         commands = new HashMap<>();
-        commands.put( "login", new LoginCommand() );
-        commands.put( "CustomerPage" , new CustomerCommand() );
-        commands.put( "createOrder" , new CreateOrderCommand());
-        commands.put( "register" , new Register());
-        commands.put( "EmployeePage", new EmployeeCommand() );
-        commands.put( "InputPage", new DrawerCommand()  );
+        commands.put( "login", new Login() );
+        commands.put( "register", new Register() );
+        commands.put("calculate_bricks", new Calculator() );
+        commands.put("showOrderCommand", new showOrderCommand());
+        commands.put( "CreateOrder", new CreateOrder() );
+        commands.put( "newOrder", new  NewOrder() );
+        commands.put( "customerpage", new customerpage());
         
-       
+
     }
 
     static Command from( HttpServletRequest request ) {
@@ -35,6 +33,6 @@ abstract class Command {
     }
 
     abstract String execute( HttpServletRequest request, HttpServletResponse response ) 
-            throws ServletException, IOException, LoginSampleException, OrderException, ClassNotFoundException;
+            throws LoginSampleException, OrderException;
 
 }

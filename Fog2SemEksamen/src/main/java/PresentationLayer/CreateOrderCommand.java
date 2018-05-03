@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 
-public class CreateOrder extends Command {
+public class CreateOrderCommand extends Command {
    
     @Override
     String execute(HttpServletRequest request, HttpServletResponse response) throws LoginSampleException, OrderException, ClassNotFoundException {
@@ -34,6 +34,7 @@ public class CreateOrder extends Command {
         } catch (OrderException ex) {
             throw new OrderException("could not save order");
         }
-        return "customerpage";
+            return "OrdreOversigt";
+       
     }     
 }
