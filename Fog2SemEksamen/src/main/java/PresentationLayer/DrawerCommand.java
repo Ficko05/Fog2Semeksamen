@@ -11,7 +11,7 @@ public class DrawerCommand extends Command{
     
      @Override
      String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-            return "InputPage";
+            return "DrawingPage";
 //        try {
          //  request.getRequestDispatcher("/WEB-INF/CustomerPage.jsp").forward(request, response);
 //        } catch (Exception e) {

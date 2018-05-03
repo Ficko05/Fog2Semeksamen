@@ -15,7 +15,18 @@
 
             <br/><br/>
             <div class="buttonHolder">
-                <input type="submit" value="CustomerPage" />
+                <input type="submit" value="InputPage" />
+            </div>
+        </form>
+        
+        <form name="CustomerPage" action="FrontController" method="post">
+
+            <input type="hidden" name="command" value="ShowOrders" />
+
+
+            <br/><br/>
+            <div class="buttonHolder">
+                <input type="submit" value="ShowOrders" />
             </div>
         </form>
     </body>

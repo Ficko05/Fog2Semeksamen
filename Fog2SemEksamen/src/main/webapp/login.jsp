@@ -44,8 +44,8 @@
         </form>
                         
   <h2>Or Register</h2>
-                      <form name="register" action="FrontController" method="POST">
-                        <input type="hidden" name="command" value="register">
+                      <form name="RegisterPage" action="FrontController" method="POST">
+                        <input type="hidden" name="command" value="RegisterPage">
                         Name:<br>
                         <input type="text" name="username" value="">
                         Email:<br>
