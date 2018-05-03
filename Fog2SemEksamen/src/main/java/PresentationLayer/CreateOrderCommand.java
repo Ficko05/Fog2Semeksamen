@@ -34,7 +34,7 @@ public class CreateOrderCommand extends Command {
         } catch (OrderException ex) {
             throw new OrderException("could not save order");
         }
-            return "OrdreOversigt";
+            return "CustomerPage";
        
     }     
 }
