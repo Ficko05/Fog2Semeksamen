@@ -1,0 +1,14 @@
+#purchasetable{
+    
+    width: 500px;
+    background: #FFF0AA;
+    border: 2px blueviolet solid;
+}
+
+.tbodypurchase{
+    
+     border: 2px blueviolet solid;
+      box-sizing: border-box;
+    text-align: center;
+}
+
