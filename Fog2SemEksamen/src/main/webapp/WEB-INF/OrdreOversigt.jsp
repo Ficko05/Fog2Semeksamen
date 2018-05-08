@@ -7,19 +7,24 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
     </head>
-    <body>
+    
         <h1>odre oversigt</h1>
+        <tbody class="tbodypurchase">
+                <% List<Order> orders = (List<Order>) request.getAttribute("orders");
+                    for (Order order : orders) {%>
+                <tr>
+                    <th><%= order.getHeight()%></th> 
+                    <th><%= order.getLength()%></th> 
+                    <th><%= order.getWidth()%></th> 
+
+                    
+                </tr>
+                <% }%>
+            </tbody>
         
-  
-           
-        <p>hey</p>
+   
         
-        <%List<Order> orders = (List<Order>) request.getAttribute("orders");
-        
-        for(Order order:orders){
-            %> <a> <%= order.toString()%> </a><br><%
-        }
-        %>
+       
         
         
         <form name="DrawerPage" action="FrontController" method="post">
@@ -33,5 +38,5 @@
             </div>
         </form>
         
-    </body>
+    
 </html>
