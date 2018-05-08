@@ -2,21 +2,21 @@ package FunctionLayer;
 
 class Carport {
 
-    private int stopleL, stopleW, rem, spær;
+    private int stolpeL, stolpeW, rem, spær;
 
-    public Carport(int stopleL, int stopleW, int rem, int spær) {
-        this.stopleL = stopleL;
-        this.stopleW = stopleW;
+    public Carport(int stolpeL, int stolpeW, int rem, int spær) {
+        this.stolpeL = stolpeL;
+        this.stolpeW = stolpeW;
         this.rem = rem;
         this.spær = spær;
     }
 
-    public int getStopleL() {
-        return stopleL;
+    public int getStolpeL() {
+        return stolpeL;
     }
 
-    public int getStopleW() {
-        return stopleW;
+    public int getStolpeW() {
+        return stolpeW;
     }
 
     public int getRem() {

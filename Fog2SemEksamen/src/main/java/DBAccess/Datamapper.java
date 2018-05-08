@@ -45,7 +45,7 @@ public class Datamapper {
     }
 
 
-
+/** takes all orders from database and puts in an List*/
     public static List<Order> allOrders() throws OrderException{
            List<Order> orderList = new ArrayList<>();
         try {
@@ -120,7 +120,7 @@ public class Datamapper {
     public static Customer login( String email, String password ) throws LoginSampleException {
         try {
             Connection con = Connector.connection();
-            String SQL = "SELECT id FROM users "
+            String SQL = "SELECT * FROM users "
                     + "WHERE email=? AND password=?";
             PreparedStatement ps = con.prepareStatement( SQL );
             ps.setString( 1, email );
@@ -128,11 +128,12 @@ public class Datamapper {
             ResultSet rs = ps.executeQuery();
             if ( rs.next() ) {
                 String username = rs.getString("username");
-                String comment = rs.getString( "comment" );
                 int id = rs.getInt( "id" );
                 int phone = rs.getInt( "phone" );
-                Customer user = new Customer(username, password, email, id, phone, comment);
+                Customer user = new Customer(username, password, email, phone);
                 user.setId(id );
+                user.setUsername(username);
+                user.setPhone(phone);
                 return user;
             } else {
                 throw new LoginSampleException( "Could not validate user" );

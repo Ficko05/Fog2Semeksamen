@@ -56,15 +56,15 @@ public class Drawer {
         String stolpe = "";
         x = 35;
         y = 35;
-        int afstand = (order.getLength() - 80) / ((carport.getStopleL() / 2) - 1);
-        for (int i = 0; i < carport.getStopleL() / 2; i++) {
+        int afstand = (order.getLength() - 80) / ((carport.getStolpeL() / 2) - 1);
+        for (int i = 0; i < carport.getStolpeL() / 2; i++) {
             String temp = stolpe;
             stolpe = temp + stolpe();
             x += afstand;
         }
         x = 35;
         y = (order.getWidth() - 45);
-        for (int i = 0; i < carport.getStopleL() / 2; i++) {
+        for (int i = 0; i < carport.getStolpeL() / 2; i++) {
             String temp = stolpe;
             stolpe = temp + stolpe();
             x += afstand;
@@ -72,9 +72,9 @@ public class Drawer {
 
         x = order.getLength() - 45;
         y = 35;
-        afstand = (order.getWidth() - 70) / (carport.getStopleW() + 1);
-        if (carport.getStopleW() >= 1) {
-            for (int i = 0; i < carport.getStopleW(); i++) {
+        afstand = (order.getWidth() - 70) / (carport.getStolpeW() + 1);
+        if (carport.getStolpeW()>= 1) {
+            for (int i = 0; i < carport.getStolpeW(); i++) {
                 y += afstand;
                 String temp = stolpe;
                 stolpe = temp + stolpe();

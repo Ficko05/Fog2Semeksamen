@@ -6,15 +6,12 @@ public class Customer {
     
     private String username, password, email;
     private int id, phone;
-    private String comment;
 
-    public Customer(String username, String password, String email, int id, int phone, String comment) {
+    public Customer(String username, String password, String email, int phone) {
         this.username = username;
         this.password = password;
         this.email = email;
-        this.id = id;
         this.phone = phone;
-        this.comment = comment;
     }
 
     public String getUsername() {
@@ -57,13 +54,7 @@ public class Customer {
         this.phone = phone;
     }
 
-    public String getComment() {
-        return comment;
-    }
 
-    public void setComment(String comment) {
-        this.comment = comment;
-    }
 
    
     
