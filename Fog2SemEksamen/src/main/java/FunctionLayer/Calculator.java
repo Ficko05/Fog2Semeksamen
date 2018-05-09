@@ -9,9 +9,9 @@ public class Calculator {
     private int spær, stolpeW;
 
     public Carport calculate(Order o) {
-        int height = o.getHeight();
-        int length = o.getLength();
-        int width = o.getWidth();
+        int height = Math.abs(o.getHeight());
+        int length = Math.abs(o.getLength());
+        int width = Math.abs(o.getWidth());
 
         if (length >= 320) {
             stolpeL += ((length - 70) / 250) * 2;
