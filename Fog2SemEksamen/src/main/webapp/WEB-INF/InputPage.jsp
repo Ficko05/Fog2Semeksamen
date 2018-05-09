@@ -17,19 +17,19 @@
                             <br/>
                             Height:
                             <br/>
-                            <input type="number" name="height" value="1" min="200" >
+                            <input type="number" name="height" placeholder="1" min="200" >
                             <br/>
                             Length:
                             <br/>
-                            <input type="number" name="length" value="1" min="250" >
+                            <input type="number" name="length" placeholder="1" min="250" >
                             <br/>
                             Width:
                             <br/>
-                            <input type="number" name="width" value="1" min="250" > 
+                            <input type="number" name="width" placeholder="1" min="250" > 
                             <br>
                             roof_id:
                             <br/>
-                            <input type="number" name="roof_id" value="1" min="1" > 
+                            <input type="number" name="roof_id" placeholder="1" min="1" > 
                             <br>                            
                             <input type="submit" value="submit">
                             <br/>
