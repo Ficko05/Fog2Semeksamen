@@ -93,7 +93,7 @@ public class Drawer {
         for (int i = 0; i < carport.getSpær(); i++) {
             String temp = spær;
             spær = temp + spær();
-            x += afstand + 5;
+            x += afstand ;
         }
         return spær;
     }
