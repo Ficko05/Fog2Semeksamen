@@ -74,7 +74,7 @@ public class Drawer {
         x = order.getLength() - 45;
         y = 35;
         afstand = (order.getWidth() - 70) / (carport.getStolpeW() + 1);
-        if (carport.getStolpeW()>= 1) {
+        if (carport.getStolpeW() >= 1) {
             for (int i = 0; i < carport.getStolpeW(); i++) {
                 y += afstand;
                 String temp = stolpe;
@@ -100,10 +100,11 @@ public class Drawer {
     }
 
     private String pile() {
-    return "";
+
+        return "";
     }
 
     private String mål() {
-    return "";
+        return "";
     }
 }
