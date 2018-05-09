@@ -17,15 +17,15 @@
                             <br/>
                             Height:
                             <br/>
-                            <input type="number" name="height" value="1" min="1" >
+                            <input type="number" name="height" value="1" min="200" >
                             <br/>
                             Length:
                             <br/>
-                            <input type="number" name="length" value="1" min="1" >
+                            <input type="number" name="length" value="1" min="250" >
                             <br/>
                             Width:
                             <br/>
-                            <input type="number" name="width" value="1" min="1" > 
+                            <input type="number" name="width" value="1" min="250" > 
                             <br>
                             roof_id:
                             <br/>
