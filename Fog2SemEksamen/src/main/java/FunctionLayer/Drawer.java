@@ -17,9 +17,10 @@ public class Drawer {
         String svgStart = "<svg width=\"" + (order.getLength() + 100) + "\" height=\"" + (order.getWidth() + 100) + "\">";
         String tag = tag();
         String rem = rem();
-//        Carport carport = calc.calculate(order);
         String stolpe = placeStolpe();
         String spær = placeSpær();
+        String pile = pile();
+        String mål = mål();
         String svgEnd = "<svg/>";
         String svg = svgStart + tag + rem + stolpe + spær + svgEnd;
         return svg;
@@ -93,8 +94,16 @@ public class Drawer {
         for (int i = 0; i < carport.getSpær(); i++) {
             String temp = spær;
             spær = temp + spær();
-            x += afstand + 5;
+            x += afstand;
         }
         return spær;
+    }
+
+    private String pile() {
+    return "";
+    }
+
+    private String mål() {
+    return "";
     }
 }
