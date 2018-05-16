@@ -22,7 +22,7 @@ public class Drawer {
         String pile = pile();
         String mål = mål();
         String svgEnd = "<svg/>";
-        String svg = svgStart + tag + rem + stolpe + spær + svgEnd;
+        String svg = svgStart + tag + rem + stolpe + spær + pile + mål + svgEnd;
         return svg;
     }
 
@@ -71,18 +71,16 @@ public class Drawer {
             x += afstand;
         }
 
-        x = order.getLength() - 45;
-        y = 35;
-        afstand = (order.getWidth() - 70) / (carport.getStolpeW() + 1);
-        if (carport.getStolpeW() >= 1) {
-            for (int i = 0; i < carport.getStolpeW(); i++) {
-                y += afstand;
-                String temp = stolpe;
-                stolpe = temp + stolpe();
-
-            }
-
-        }
+//        x = order.getLength() - 45;
+//        y = 35;
+//        afstand = (order.getWidth() - 70) / (carport.getStolpeW() + 1);
+//        if (carport.getStolpeW() > 0) {
+//            for (int i = 0; i < carport.getStolpeW(); i++) {
+//                y += afstand;
+//                String temp = stolpe;
+//                stolpe = temp + stolpe();
+//            }
+//        }
         return stolpe;
     }
 
@@ -100,11 +98,43 @@ public class Drawer {
     }
 
     private String pile() {
+        String pil1 = "<marker id=\"beginArrow\" \n"
+                + "            markerWidth=\"9\" markerHeight=\"9\" \n"
+                + "            refX=\"0\" refY=\"4\" \n"
+                + "            orient=\"auto\">\n"
+                + "        <path d=\"M0,4 L8,0 L8,8 L0,4\" style=\"fill: #Black;\" />\n"
+                + "    </marker>\n"
+                + "    <marker id=\"endArrow\" \n"
+                + "            markerWidth=\"9\" markerHeight=\"9\" \n"
+                + "            refX=\"8\" refY=\"4\" \n"
+                + "            orient=\"auto\">\n"
+                + "        <path d=\"M0,0 L8,4 L0,8 L0,0\" style=\"fill: Black;\" />\n"
+                + "    </marker>\n"
+                + "    </defs>\n"
+                + "    <line x1=\"0\"  y1=\"" + (order.getWidth() + 50) + "\" x2=\"" + order.getLength() + "\"   y2=\"" + (order.getWidth() + 50) + "\" \n"
+                + "          style=\"stroke:Black; marker-start: url(#beginArrow); marker-end: url(#endArrow);\"/>";
 
-        return "";
+        String pil2 = "<marker id=\"beginArrow\" \n"
+                + "            markerWidth=\"9\" markerHeight=\"9\" \n"
+                + "            refX=\"0\" refY=\"4\" \n"
+                + "            orient=\"auto\">\n"
+                + "        <path d=\"M0,4 L8,0 L8,8 L0,4\" style=\"fill: #Black;\" />\n"
+                + "    </marker>\n"
+                + "    <marker id=\"endArrow\" \n"
+                + "            markerWidth=\"9\" markerHeight=\"9\" \n"
+                + "            refX=\"8\" refY=\"4\" \n"
+                + "            orient=\"auto\">\n"
+                + "        <path d=\"M0,0 L8,4 L0,8 L0,0\" style=\"fill: Black;\" />\n"
+                + "    </marker>\n"
+                + "    </defs>\n"
+                + "    <line x1=\"" + (order.getLength() + 50) + "\"  y1=\"0\" x2=\"" + (order.getLength() + 50) + "\"   y2=\"" + order.getWidth() + "\" \n"
+                + "          style=\"stroke:Black; marker-start: url(#beginArrow); marker-end: url(#endArrow);\"/>";
+        return pil1 + pil2;
     }
 
     private String mål() {
-        return "";
+        String horri = "<text x=\"" + (order.getLength() / 2) + "\"  y=\"" + (order.getWidth() + 30) + "\" >Længde:" + order.getLength() + "</text>";
+        String verti = "<text x=\"" + (order.getLength() + 30) + "\" y=\"" + (order.getWidth() / 2) + "\" style=\"writing-mode: tb; glyph-orientation-vertical: 0;\"> Brede:" + order.getWidth() + " </text>";
+        return horri + verti;
     }
 }
