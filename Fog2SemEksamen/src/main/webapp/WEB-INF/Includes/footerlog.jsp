@@ -30,7 +30,7 @@
                         <p>
                             <a href="#!">carporte</a>
                         </p>
-                       
+
                     </div>
 
                     <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
@@ -54,14 +54,12 @@
                             <strong>Contact</strong>
                         </h6>
                         <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+
                         <p>
-                            <i class="fa fa-home mr-3"></i> et sted i DK</p>
+                            <i class="fa fa-envelope mr-3"></i> info@johannesfog.dk.</p>
                         <p>
-                            <i class="fa fa-envelope mr-3"></i> FOG@example.com</p>
-                        <p>
-                            <i class="fa fa-phone mr-3"></i> 88888888</p>
-                        <p>
-                            <i class="fa fa-print mr-3"></i> 88888888</p>
+                            <i class="fa fa-phone mr-3"></i> 45 87 10 01 </p>
+
                     </div>
                 </div>
             </div>

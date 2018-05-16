@@ -15,7 +15,7 @@
     </head>
     <body>
 
-        <%@include file="/WEB-INF/Includes/menulog.jsp" %>
+        <%@include file="/WEB-INF/Includes/menu.jsp" %>
 
         <div class="container">
             <div class="row">
