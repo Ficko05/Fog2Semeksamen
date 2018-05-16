@@ -22,7 +22,7 @@
         <form name="CustomerPage" action="FrontController" method="post">
             <input type="hidden" name="command" value="CustomerPage" />
             <br/><br/>
-            <input class="btn btn-success" type="submit" value="InputPage" />
+            <input class="btn btn-success" type="submit" value="lav din carport" />
         </form>
 
         <form name="CustomerPage" action="FrontController" method="post">
