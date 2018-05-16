@@ -23,16 +23,13 @@
             <a href="login.jsp" class="btn btn-success" role="button">login</a>
         </div>
 
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8">
-                    <img src="Image/gg.jpg">
-                    <img src="gg.jpg" alt="karl" class="center">
-                </div>
-            </div> 
+
+        <div class="row">
+        <img src="https://solundhuse.dk/wp-content/uploads/2018/01/Karl_2_with_extension_small-1.jpg" alt="karl" height="100"/>
         </div>
         
         <%@include file="/WEB-INF/Includes/footer.jsp" %>
+
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <!-- Latest compiled and minified JavaScript -->
