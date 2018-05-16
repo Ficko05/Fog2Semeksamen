@@ -10,7 +10,7 @@
     </head>
     <body>
 
-        <h1>odre oversigt</h1>
+        <h1>Odre oversigt</h1>
         <table id="purchasetable">
             <thead class="tbodypurchase">
                 <tr>
@@ -23,7 +23,7 @@
                 </tr>
             </thead>
             <tbody class="tbodypurchase">
-                <% List<Order> orders = (List<Order>) request.getAttribute("orders");
+                <% List<Order> orders = (List<Order>) request.getAttribute("CustomerOrders");
                     for (Order order : orders) {%>
                 <tr>
                     <th><%= order.getHeight()%></th> 
@@ -39,10 +39,11 @@
             </tbody>
             
 
+        </table>
 
-            <form name="CustomerPage" action="FrontController" method="post">
+            <form name="Customerpage" action="FrontController" method="post">
 
-                <input type="hidden" name="command" value="CustomerpageButton" />
+                <input type="hidden" name="command" value="CustomerPageButton" />
 
 
                 <br/><br/>
@@ -50,6 +51,5 @@
                     <input type="submit" value="CustomerPage" />
                 </div>
             </form>
-        </table>
     </body>
 </html>

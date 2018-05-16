@@ -7,21 +7,22 @@
     </head>
     <body>
         <h1>din karport</h1>
+    <table>
 
         <%
           String svg = (String) request.getSession().getAttribute("svg");
             out.print(svg);
             %>
-            
-            <form name="back" action="FrontController" method="post">
+    </table> 
+            <form name="CustomerPage" action="FrontController" method="post">
 
-            <input type="hidden" name="command" value="CustomerPage" />
+                <input type="hidden" name="command" value="CustomerPageButton" />
 
 
-            <br/><br/>
-            <div class="buttonHolder">
-                <input type="submit" value="CustomerPage" />
-            </div>
-        </form>
+                <br/><br/>
+                <div class="buttonHolder">
+                    <input type="submit" value="CustomerPage" />
+                </div>
+            </form>
     </body>
 </html>
