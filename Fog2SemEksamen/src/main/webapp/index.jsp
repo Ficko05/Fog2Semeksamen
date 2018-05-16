@@ -15,6 +15,7 @@
 
     </head>
     <body>
+        
         <%@include file="/WEB-INF/Includes/menu.jsp" %>
 
         <div class="text-center"   >
@@ -30,6 +31,8 @@
                 </div>
             </div> 
         </div>
+        
+        <%@include file="/WEB-INF/Includes/footer.jsp" %>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <!-- Latest compiled and minified JavaScript -->
