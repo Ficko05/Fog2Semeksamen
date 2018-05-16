@@ -4,6 +4,7 @@
     Author     : steven
 --%>
 
+<%@page import="FunctionLayer.BillOfMaterial.Material"%>
 <%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -25,21 +26,18 @@
                 </tr>
             <tbody class="tbodypurchase">
                 <% ArrayList<Material> bom = (ArrayList<Material>) request.getAttribute("bom");
-                        for (int i = 0; bom.size() < 10; i++) {
-                                
-                            
- {%>
-                    <tr>
-                        <th><% bom.getName();%></th> 
-                        <th><% bom.getFormat();%></th> 
-                        <th><% bom.getQuantity();%></th> 
-                        <th><% bom.getDescription();%></th> 
-                    </tr>
-                    <% }%>
+                    for (Material mat : bom) {%>
+                <tr>
+                    <th><% mat.getName();%></th> 
+                    <th><% mat.getFormat();%></th> 
+                    <th><% mat.getQuantity();%></th> 
+                    <th><% mat.getDescription();%></th> 
+                </tr>
+                <% }%>
             </tbody>
-            </thead>
+        </thead>
 
-        </table>
+    </table>
 
-    </body>
+</body>
 </html>
