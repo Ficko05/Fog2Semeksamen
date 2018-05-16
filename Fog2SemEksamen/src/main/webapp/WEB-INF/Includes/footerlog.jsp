@@ -39,7 +39,7 @@
                         </h6>
                         <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
                         <p>
-                            <a href="login.jsp">login</a>
+                            <a href="login.jsp">input</a>
                         </p>
                         <p>
                             <a href="#!">ledige stillinger</a>
@@ -67,8 +67,7 @@
             </div>
             <div class="footer-copyright py-3 text-center">
                 © 2018 Copyright:
-               
-                
+
             </div>
         </footer>
     </div>

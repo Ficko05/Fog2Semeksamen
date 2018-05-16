@@ -11,21 +11,26 @@
 
         <!-- Optional theme -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
+<style>
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+</style>
 
     </head>
     <body>
         
         <%@include file="/WEB-INF/Includes/menu.jsp" %>
 
-        <div class="text-center"   >
+        <div class="text-center">
             <h2>Welcome!</h2>        
-            <a href="login.jsp" class="btn btn-success" role="button">login</a>
         </div>
 
 
-        <div class="row">
-        <img src="https://solundhuse.dk/wp-content/uploads/2018/01/Karl_2_with_extension_small-1.jpg" alt="karl" height="100"/>
+        <div class="container">
+            <img src="https://solundhuse.dk/wp-content/uploads/2018/01/Karl_2_with_extension_small-1.jpg" alt="karl"  height="500" />
         </div>
         
         <%@include file="/WEB-INF/Includes/footer.jsp" %>

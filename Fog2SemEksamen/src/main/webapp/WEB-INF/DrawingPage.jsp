@@ -12,7 +12,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <%@include file="Includes/menu.jsp" %>
+        <%@include file="/WEB-INF/Includes/menulog.jsp" %>
 
         <h1>din karport</h1>
 
@@ -26,6 +26,8 @@
             <br/><br/>
             <input class="btn btn-success" type="submit" value="CustomerPage" />
         </form>
+        <br><br>
+        <%@include file="/WEB-INF/Includes/footerlog.jsp" %>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <!-- Latest compiled and minified JavaScript -->

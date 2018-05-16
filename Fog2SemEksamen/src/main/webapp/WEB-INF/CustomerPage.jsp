@@ -13,8 +13,10 @@
 
     </head>
     <body>
-        <%@include file="Includes/menu.jsp" %>
+       <%@include file="/WEB-INF/Includes/menulog.jsp" %>
 
+        <div class="text-center">
+            
         <h1>customer</h1>
 
         <form name="CustomerPage" action="FrontController" method="post">
@@ -28,6 +30,9 @@
             <br/><br/>
             <input class="btn btn-success" type="submit" value="ShowOrders" />
         </form>
+        </div>
+        <br><br>
+        <%@include file="/WEB-INF/Includes/footerlog.jsp" %>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <!-- Latest compiled and minified JavaScript -->
