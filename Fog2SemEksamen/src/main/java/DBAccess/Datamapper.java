@@ -12,6 +12,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import FunctionLayer.Customer;
+import FunctionLayer.Employee;
 import java.sql.Date;
 import java.sql.Timestamp;
 
@@ -19,7 +20,7 @@ import java.sql.Timestamp;
 public class Datamapper {
    
     /**puts values into OrderDB*/
-    public static void createOrder (Order order) throws OrderException{
+    public static void createOrder (Order order, int customer_id) throws OrderException{
         try {
             Connection con = Connector.connection();
             String SQL = "INSERT INTO `order` (customer_id, height, length, width, roof_id) VALUES (?, ?, ?, ?, ?)";
@@ -28,7 +29,7 @@ public class Datamapper {
             int length = order.getLength();
             int width = order.getWidth();
             int roofId = order.getRoof_id();
-            ps.setInt( 1, 1);
+            ps.setInt( 1, customer_id);
             ps.setInt( 2, height);
             ps.setInt( 3, length);
             ps.setInt( 4, width);
@@ -76,6 +77,37 @@ public class Datamapper {
         
         
     }
+     public static List<Order> CustomerOrders(Customer customer) throws OrderException{
+           List<Order> orderList = new ArrayList<>();
+        try {
+            Connection con = Connector.connection();
+            String SQL = "SELECT * FROM `order` WHERE customer_id = ?";
+            PreparedStatement ps = con.prepareStatement(SQL);
+            ps.setInt(1, customer.getId());
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                int id = rs.getInt("id");
+                int customer_id = rs.getInt("customer_id");
+                int height = rs.getInt("height");
+                int length = rs.getInt("length");
+                int width = rs.getInt("width");
+                int roof_id = rs.getInt("roof_id");
+                int roof_angle = rs.getInt("roof_angle");
+                int shed_id = rs.getInt("shed_id");
+                String customer_comment = rs.getString("customer_comment");
+                String status = rs.getString("status");
+                String date = rs.getString("date");
+                String type = rs.getString("type");
+                Order order = new Order(id, customer_id, length, width, height, roof_id, roof_angle, shed_id, customer_comment, status, date, type);
+                orderList.add(order);
+            }
+            return orderList;
+        } catch (ClassNotFoundException | SQLException ex) {
+            throw new OrderException(ex.getMessage());
+        }
+        
+        
+    }
     
 //    /** rigtige løsning på CreateOrder når man kan logge ind*/
 //    public static int customerById( User user ) throws OrderException, ClassNotFoundException
@@ -98,20 +130,20 @@ public class Datamapper {
 
 
 
-    public static void createUser( Customer user ) throws LoginSampleException {
+    public static void createCustomer( Customer customer ) throws LoginSampleException {
         try {
             Connection con = Connector.connection();
             String SQL = "INSERT INTO customer (username, password, email, phone) VALUES (?, ?, ?, ?)";
             PreparedStatement ps = con.prepareStatement( SQL, Statement.RETURN_GENERATED_KEYS );
-            ps.setString( 1, user.getUsername());
-            ps.setString( 2, user.getPassword() );
-            ps.setString( 3, user.getEmail());
-            ps.setInt(4, user.getPhone());
+            ps.setString(1, customer.getUsername());
+            ps.setString(2, customer.getPassword() );
+            ps.setString(3, customer.getEmail());
+            ps.setInt(4, customer.getPhone());
             ps.executeUpdate();
             ResultSet ids = ps.getGeneratedKeys();
             ids.next();
             int id = ids.getInt( 1 );
-            user.setId( id );
+            customer.setId( id );
         } catch ( SQLException | ClassNotFoundException ex) {
             throw new LoginSampleException( ex.getMessage() );
         }
@@ -120,7 +152,7 @@ public class Datamapper {
     public static Customer login( String email, String password ) throws LoginSampleException {
         try {
             Connection con = Connector.connection();
-            String SQL = "SELECT * FROM users "
+            String SQL = "SELECT * FROM customer "
                     + "WHERE email=? AND password=?";
             PreparedStatement ps = con.prepareStatement( SQL );
             ps.setString( 1, email );
@@ -130,7 +162,33 @@ public class Datamapper {
                 String username = rs.getString("username");
                 int id = rs.getInt( "id" );
                 int phone = rs.getInt( "phone" );
-                Customer user = new Customer(username, password, email, phone);
+                Customer customer = new Customer(username, password, email, phone);
+                customer.setId(id );
+                customer.setUsername(username);
+                customer.setPhone(phone);
+                return customer;
+            } else {
+                throw new LoginSampleException( "Could not validate user" );
+            }
+        } catch ( ClassNotFoundException | SQLException ex ) {
+            throw new LoginSampleException(ex.getMessage());
+        }
+    }
+     public static Employee loginEmployee( String email, String password ) throws LoginSampleException {
+        try {
+            Connection con = Connector.connection();
+            String SQL = "SELECT * FROM employee "
+                    + "WHERE email=? AND password=?";
+            PreparedStatement ps = con.prepareStatement( SQL );
+            ps.setString( 1, email );
+            ps.setString( 2, password );
+            ResultSet rs = ps.executeQuery();
+            if ( rs.next() ) {
+                String username = rs.getString("username");
+                int id = rs.getInt( "id" );
+                int phone = rs.getInt( "phone" );
+                int cpr = rs.getInt("cpr");
+                Employee user = new Employee(username, password, email, phone, cpr);
                 user.setId(id );
                 user.setUsername(username);
                 user.setPhone(phone);
@@ -142,24 +200,26 @@ public class Datamapper {
             throw new LoginSampleException(ex.getMessage());
         }
     }
-//    
-//    public static void createEmployee( Employee employee ) throws LoginSampleException {
-//        try {
-//            Connection con = Connector.connection();
-//            String SQL = "INSERT INTO users (email, password, role) VALUES (?, ?, ?)";
-//            PreparedStatement ps = con.prepareStatement( SQL, Statement.RETURN_GENERATED_KEYS );
-//            ps.setString( 1, employee.getEmail() );
-//            ps.setString( 2, employee.getPassword() );
-//            ps.setString( 3, employee.getRole() );
-//            ps.executeUpdate();
-//            ResultSet ids = ps.getGeneratedKeys();
-//            ids.next();
-//            int id = ids.getInt( 1 );
-//            employee.setId( id );
-//        } catch ( SQLException | ClassNotFoundException ex ) {
-//            throw new LoginSampleException( ex.getMessage() );
-//        }
-//    }
+    
+    public static void createEmployee( Employee employee ) throws LoginSampleException {
+        try {
+              Connection con = Connector.connection();
+            String SQL = "INSERT INTO employee (username, password, email, phone, cpr) VALUES (?, ?, ?, ?, ?)";
+            PreparedStatement ps = con.prepareStatement( SQL, Statement.RETURN_GENERATED_KEYS );
+            ps.setString(1, employee.getUsername());
+            ps.setString(2, employee.getPassword() );
+            ps.setString(3, employee.getEmail());
+            ps.setInt(4, employee.getPhone());
+            ps.setInt(5, employee.getCpr());
+            ps.executeUpdate();
+            ResultSet ids = ps.getGeneratedKeys();
+            ids.next();
+            int id = ids.getInt( 1 );
+            employee.setId( id );
+        } catch ( SQLException | ClassNotFoundException ex) {
+            throw new LoginSampleException( ex.getMessage() );
+        }
+    }
 //    
     
     

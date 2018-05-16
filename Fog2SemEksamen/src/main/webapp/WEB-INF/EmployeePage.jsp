@@ -23,8 +23,23 @@
             <br/><br/>
             <input class="btn btn-success" type="submit" value="OrdreOversigt" />
         </form>
-        </div>
         <br><br>
+
+          
+             
+
+        </form>
+          
+        <form name="EmployeePage" action="FrontController" method="post">
+
+            <input type="hidden" name="command" value="CreateEmployeePage" />
+
+
+            <br/><br/>
+                <input class="btn btn-success" type="submit" value="Create new Employee" />
+        </form>
+            </div>
+ 
         <%@include file="/WEB-INF/Includes/footerlog.jsp" %>
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

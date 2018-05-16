@@ -20,12 +20,15 @@ abstract class Command {
         commands.put( "CustomerPage" , new CustomerCommand() );
         commands.put( "CreateOrderPage" , new CreateOrderCommand());
         commands.put( "RegisterPage" , new RegisterCommand());
-        commands.put( "EmployeePage", new EmployeeCommand() );
+        commands.put( "LoginEmployeePage", new LoginEmployeeCommand() );
         commands.put( "InputPage", new DrawerCommand()  );
-        commands.put( "ShowOrders", new ShowOrdersCommand() ); 
+        commands.put( "ShowOrders", new ShowOrdersCommand() );
+        commands.put( "ShowCustomerOrders", new ShowCustomerOrdersCommand());
+        commands.put( "CreateEmployeePage", new CreateEmployeePageCommand());
+        commands.put( "CreateEmployee", new CreateEmployeeCommand());
+        commands.put( "CustomerPageButton", new CustomerPageCommand());
         commands.put( "Bom", new BomCommand() ); 
         
-       
     }
 
     static Command from( HttpServletRequest request ) {

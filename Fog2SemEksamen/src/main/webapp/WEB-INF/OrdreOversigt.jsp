@@ -50,8 +50,9 @@
             </table>
         </div>
 
-        <form name="DrawerPage" action="FrontController" method="post">
-            <input type="hidden" name="command" value="DrawerPage" />
+        <form name="CustomerPage" action="FrontController" method="post">
+
+                <input type="hidden" name="command" value="CustomerpageButton" />
             <br/><br/>
             <input class="btn btn-success" type="submit" value="CustomerPage" />
         </form>
