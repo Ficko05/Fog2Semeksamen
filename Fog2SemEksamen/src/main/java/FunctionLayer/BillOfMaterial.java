@@ -16,7 +16,7 @@ public class BillOfMaterial {
         return bom;
     }
 
-    private static class Material {
+    public static class Material {
 
         String name, format, description;
         int quantity;
