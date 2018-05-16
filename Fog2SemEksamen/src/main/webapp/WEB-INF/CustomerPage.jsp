@@ -26,7 +26,10 @@
         </form>
 
         <form name="CustomerPage" action="FrontController" method="post">
-            <input type="hidden" name="command" value="ShowOrders" />
+
+            <input type="hidden" name="command" value="ShowCustomerOrders" />
+
+
             <br/><br/>
             <input class="btn btn-success" type="submit" value="ShowOrders" />
         </form>

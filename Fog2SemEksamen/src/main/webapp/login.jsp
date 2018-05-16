@@ -33,7 +33,7 @@
                 <div class="col-lg-4 "
                      <br><br>
                      <form name="EmployeePage" action="FrontController" method="post">
-                        <input type="hidden" name="command" value="EmployeePage" />
+                    <input type="hidden" name="command" value="LoginEmployeePage" />
                         <input type="text" name="email"  placeholder="Email" />
                         <input type="password" name="password"  placeholder="Password" />
                         <br/><br/>
@@ -47,8 +47,10 @@
                         <input type="hidden" name="command" value="RegisterPage">
                         Name:<br>
                         <input type="text" name="username" value="">
+                        <br>
                         Email:<br>
                         <input type="text" name="email" value="@nowhere.com">
+                        <br>
                         Phone:<br>
                         <input type="text" name="phone" value="">
                         <br>

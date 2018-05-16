@@ -22,10 +22,12 @@ public class CreateOrderCommand extends Command {
         int length = Integer.parseInt(request.getParameter("length"));
         int width = Integer.parseInt(request.getParameter("width"));
         int roof_id = Integer.parseInt(request.getParameter("roof_id"));
-        Order o = new Order(length, width, height, roof_id);
+        Order o = new Order(length, width, height, roof_id);;
         Drawer draw = new Drawer(o);
         String svg = draw.SVG();
         session.setAttribute("svg", svg);
+        Customer customer = (Customer) session.getAttribute("customer");
+
 //        int roof_angle = Integer.parseInt(request.getParameter("roof_angle"));
 //        int shed_id = Integer.parseInt(request.getParameter("shed_id"));
 //        String customer_comment = request.getParameter("roof_id");        
@@ -36,7 +38,7 @@ public class CreateOrderCommand extends Command {
         //customer user = (customer) session.getAttribute("user");
         
         try {
-            LogicFacade.createOrder(o);
+            LogicFacade.createOrder(o, customer.getId());
         } catch (OrderException ex) {
             throw new OrderException("could not save order");
         }

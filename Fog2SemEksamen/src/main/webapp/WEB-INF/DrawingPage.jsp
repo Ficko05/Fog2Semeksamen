@@ -15,6 +15,7 @@
         <%@include file="/WEB-INF/Includes/menulog.jsp" %>
 
         <h1>din karport</h1>
+    <table>
 
         <%
             String svg = (String) request.getSession().getAttribute("svg");
@@ -29,9 +30,23 @@
         <br><br>
         <%@include file="/WEB-INF/Includes/footerlog.jsp" %>
 
+
+
+            
+    </table> 
+            <form name="CustomerPage" action="FrontController" method="post">
+
+                <input type="hidden" name="command" value="CustomerPageButton" />
+
+
+                <br/><br/>
+                <div class="buttonHolder">
+                    <input type="submit" value="CustomerPage" />
+                </div>
+            </form>
+>>>>>>> order
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
     </body>
 </html>
