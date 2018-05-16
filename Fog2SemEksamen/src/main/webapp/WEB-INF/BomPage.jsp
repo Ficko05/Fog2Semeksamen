@@ -1,8 +1,3 @@
-<%-- 
-    Document   : BomPage
-    Created on : May 16, 2018, 1:31:44 PM
-    Author     : steven
---%>
 
 <%@page import="FunctionLayer.BillOfMaterial.Material"%>
 <%@page import="java.util.ArrayList"%>
