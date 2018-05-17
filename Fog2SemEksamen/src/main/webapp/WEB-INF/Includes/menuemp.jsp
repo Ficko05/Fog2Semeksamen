@@ -2,25 +2,25 @@
     <div class="container-fluid">
         <header>
 
-            <%@page import="FunctionLayer.Customer"%>
+            <%@page import="FunctionLayer.Employee"%>
 
-            <%Customer cust = (Customer) session.getAttribute("customer");%>
+            <%Employee emp = (Employee) session.getAttribute("LoginEmployeeCommand");%>
             <div class="navbar-header">
                 <a class="navbar-brand" href="index.jsp">FOG</a>
             </div>
             <ul class="nav navbar-nav">
 
-                <% if (cust != null) { %>
+                <% if (emp != null) { %>
                 <li><a href="FrontController?command=CustomerPageButton">Min Side</a></li>
                     <% }%>
-                    <% if (cust == null) { %>
+                    <% if (emp == null) { %>
                 <li>        <a href="FrontController?command=login">Login</a></li>
                     <% } else { %>
                 <li> <a href="index.jsp">Logud</a></li>
                     <% }%>
                 
 
-                <li><a href="FrontController?command=ShowCustomerOrders"> mine order</a></li>
+                <li><a href="FrontController?command=ShowOrders"> Ordre</a></li>
             </ul>
         </header>
     </div>

@@ -13,28 +13,19 @@
 
     </head>
     <body>
-       <%@include file="/WEB-INF/Includes/menulog.jsp" %>
+        <%@include file="/WEB-INF/Includes/menulog.jsp" %>
 
         <div class="text-center">
-            
-        <h1>customer</h1>
 
-        <form name="CustomerPage" action="FrontController" method="post">
-            <input type="hidden" name="command" value="CustomerPage" />
-            <br/><br/>
-            <input class="btn btn-success" type="submit" value="lav din carport" />
-        </form>
+            <h1>kundeside</h1>
 
-        <form name="CustomerPage" action="FrontController" method="post">
-
-            <input type="hidden" name="command" value="ShowCustomerOrders" />
-
-
-            <br/><br/>
-            <input class="btn btn-success" type="submit" value="ShowOrders" />
-        </form>
+            <form name="CustomerPage" action="FrontController" method="post">
+                <input type="hidden" name="command" value="CustomerPage" />
+                <br/><br/>
+                <input class="btn btn-success" type="submit" value="lav din carport" />
+            </form>
         </div>
-       
+
         <br><br>
         <%@include file="/WEB-INF/Includes/footerlog.jsp" %>
 

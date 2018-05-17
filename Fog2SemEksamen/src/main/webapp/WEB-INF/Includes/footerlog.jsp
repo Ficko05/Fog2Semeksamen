@@ -39,7 +39,7 @@
                         </h6>
                         <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
                         <p>
-                            <a href="login.jsp">input</a>
+                            <a href="inputPage.jsp">input</a>
                         </p>
                         <p>
                             <a href="#!">ledige stillinger</a>

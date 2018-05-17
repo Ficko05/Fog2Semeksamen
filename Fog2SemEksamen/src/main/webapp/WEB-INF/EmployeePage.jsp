@@ -12,7 +12,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <%@include file="/WEB-INF/Includes/menulog.jsp" %>
+        <%@include file="/WEB-INF/Includes/menuemp.jsp" %>
         
         <div class="text-center">
             
