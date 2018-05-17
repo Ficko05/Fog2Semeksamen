@@ -24,7 +24,7 @@
                         <th>Width</th>
                         <th>Roof_id</th>
                         <th>Date</th>
-                        <th>status</th>
+                        <th>Status</th>
                     </tr>
                 </thead>
                 <tbody class="tbodypurchase">

@@ -21,7 +21,7 @@
     <body>
         <%@include file="/WEB-INF/Includes/menulog.jsp" %>
         <div class="center-block">
-            <h1>inputpage</h1>
+            <h1>Inputpage</h1>
             <table>
                 <tr>
                     <td>

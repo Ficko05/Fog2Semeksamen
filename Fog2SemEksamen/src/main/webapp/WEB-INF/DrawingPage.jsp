@@ -14,7 +14,7 @@
     <body>
         <%@include file="/WEB-INF/Includes/menulog.jsp" %>
 
-        <h1>din karport</h1>
+        <h1>Din Carport</h1>
     <table>
 
         <%

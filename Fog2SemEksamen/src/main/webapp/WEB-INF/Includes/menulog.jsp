@@ -23,7 +23,7 @@
                 <% }%>
 
 
-                <li><a href="FrontController?command=ShowCustomerOrders"> mine order</a></li>
+                <li><a href="FrontController?command=ShowCustomerOrders"> Mine ordre</a></li>
             </ul>
         </header>
     </div>

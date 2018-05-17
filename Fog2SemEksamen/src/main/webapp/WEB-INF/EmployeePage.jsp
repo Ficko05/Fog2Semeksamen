@@ -16,7 +16,7 @@
         
         <div class="text-center">
             
-        <h1>employee</h1>
+        <h1>Employee</h1>
 
         <form name="CustomerPage" action="FrontController" method="post">
             <input type="hidden" name="command" value="ShowOrders" />
