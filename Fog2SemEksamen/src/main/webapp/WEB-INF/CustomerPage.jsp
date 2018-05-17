@@ -20,7 +20,7 @@
             <h1>kundeside</h1>
 
             <form name="CustomerPage" action="FrontController" method="post">
-                <input type="hidden" name="command" value="CustomerPage" />
+                <input type="hidden" name="command" value="inputPage" />
                 <br/><br/>
                 <input class="btn btn-success" type="submit" value="lav din carport" />
             </form>

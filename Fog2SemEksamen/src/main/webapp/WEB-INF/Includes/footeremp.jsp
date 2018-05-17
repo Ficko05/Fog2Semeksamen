@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <div class="bg-info">
 
-
+        <% request.getSession();%>
         <footer class="page-footer font-small unique-color-dark pt-0">
 
             <div style="background-color: #6351ce;">
@@ -38,8 +38,8 @@
                             <strong>Useful links</strong>
                         </h6>
                         <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                       
-                        
+
+
                         <p>
                             <a href="#!">Help</a>
                         </p>

@@ -1,8 +1,8 @@
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <header>
-
             <%@page import="FunctionLayer.Customer"%>
+           
 
             <%Customer cust = (Customer) session.getAttribute("customer");%>
             <div class="navbar-header">
@@ -15,10 +15,13 @@
                     <% }%>
                     <% if (cust == null) { %>
                 <li>        <a href="FrontController?command=login">Login</a></li>
-                    <% } else { %>
+                    <% }  if(cust != null) { %>
+                    
                 <li> <a href="index.jsp">Logud</a></li>
-                    <% }%>
-                
+
+
+                <% }%>
+
 
                 <li><a href="FrontController?command=ShowCustomerOrders"> mine order</a></li>
             </ul>
