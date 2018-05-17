@@ -25,23 +25,23 @@
             <table class="table table-bordered">
                 <thead>
                     <tr>
+                        <th>Order id</th>
                         <th>Height</th>
                         <th>Length</th>
                         <th>Width</th>
-                        <th>Roof_id</th>
                         <th>Date</th>
                         <th>Status</th>
                     </tr>
                 </thead>
-                
+
                 <tbody class="tbodypurchase">
-                    <% List<Order> orders = (List<Order>) request.getAttribute("orders");
+                    <% List<Order> orders = (List<Order>) request.getSession().getAttribute("orders");
                         for (Order order : orders) {%>
                     <tr>
+                        <th><%= order.getId()%></th>
                         <th><%= order.getHeight()%></th> 
                         <th><%= order.getLength()%></th> 
                         <th><%= order.getWidth()%></th> 
-                        <th><%= order.getRoof_id()%></th>
                         <th><%= order.getDate()%></th>
                         <th><%= order.getStatus()%> </th>
                     </tr>
@@ -49,18 +49,17 @@
                 </tbody>
             </table>
         </div>
-
-        <form name="CustomerPage" action="FrontController" method="post">
-
-                <input type="hidden" name="command" value="CustomerpageButton" />
-            <br/><br/>
-            <input class="btn btn-success" type="submit" value="CustomerPage" />
+        <form name="OrdreOversigt" action="FrontController" method="post">
+            <input type="hidden" name="command" value="Bom" />
+            <input type="number" name="orderid" placeholder="Vælg et ordre nr">
+            <input class="btn btn-success" type="submit" value="Se stykliste" />
         </form>
+
     </table>
     <br><br>
-    
+
     <%@include file="/WEB-INF/Includes/footerlog.jsp" %>
-    
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

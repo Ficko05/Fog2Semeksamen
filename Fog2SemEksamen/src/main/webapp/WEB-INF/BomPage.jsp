@@ -20,13 +20,13 @@
                     <th>Beskrivelse</th>
                 </tr>
             <tbody class="tbodypurchase">
-                <% ArrayList<Material> bom = (ArrayList<Material>) request.getAttribute("bom");
+                <% ArrayList<Material> bom = (ArrayList<Material>) request.getSession().getAttribute("bom");
                     for (Material mat : bom) {%>
                 <tr>
-                    <th><% mat.getName();%></th> 
-                    <th><% mat.getFormat();%></th> 
-                    <th><% mat.getQuantity();%></th> 
-                    <th><% mat.getDescription();%></th> 
+                    <th><% out.print(mat.getName());%></th> 
+                    <th><% out.print(mat.getFormat());%></th> 
+                    <th><% out.print(mat.getQuantity());%></th> 
+                    <th><% out.print(mat.getDescription());%></th> 
                 </tr>
                 <% }%>
             </tbody>

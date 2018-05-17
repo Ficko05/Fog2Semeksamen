@@ -7,15 +7,16 @@ import FunctionLayer.Order;
 import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 public class ShowOrdersCommand extends Command {
 
     @Override
     String execute( HttpServletRequest request, HttpServletResponse response ) throws LoginSampleException, OrderException {
         List<Order> orders;
-
+        HttpSession session = request.getSession();
         orders =LogicFacade.allOrders();
-        request.setAttribute("orders", orders);
+        session.setAttribute("orders", orders);
 
         return "OrdreOversigt";
         }
