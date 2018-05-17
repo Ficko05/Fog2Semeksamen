@@ -51,7 +51,7 @@
                 </tr>
             </table>
         </div>
-        <br><br>
+        <br><br><br><br><br><br><br>
         <%@include file="/WEB-INF/Includes/footerlog.jsp" %>
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

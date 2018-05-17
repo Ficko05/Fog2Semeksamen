@@ -15,35 +15,17 @@
         <%@include file="/WEB-INF/Includes/menulog.jsp" %>
 
         <h1>Din Carport</h1>
-    <table>
+        <table>
 
-        <%
-            String svg = (String) request.getSession().getAttribute("svg");
-            out.print(svg);
-        %>
+            <%
+                String svg = (String) request.getSession().getAttribute("svg");
+                out.print(svg);
+            %>
 
-        <form name="back" action="FrontController" method="post">
-            <input type="hidden" name="command" value="CustomerPage" />
-            <br/><br/>
-            <input class="btn btn-success" type="submit" value="CustomerPage" />
-        </form>
-        <br><br>
+            <br><br>
+        </table> 
         <%@include file="/WEB-INF/Includes/footerlog.jsp" %>
 
-
-
-            
-    </table> 
-            <form name="CustomerPage" action="FrontController" method="post">
-
-                <input type="hidden" name="command" value="CustomerPageButton" />
-
-
-                <br/><br/>
-                <div class="buttonHolder">
-                    <input type="submit" value="CustomerPage" />
-                </div>
-            </form>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

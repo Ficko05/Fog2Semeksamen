@@ -47,16 +47,7 @@
 
 
 
-        <form name="Customerpage" action="FrontController" method="post">
-
-            <input type="hidden" name="command" value="CustomerPageButton" />
-
-
-            <br/><br/>
-            <div class="buttonHolder">
-                <input type="submit" value="CustomerPage" />
-            </div>
-        </form>
+                <br><br><br><br><br><br><br><br>
         <%@include file="/WEB-INF/Includes/footerlog.jsp" %>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <!-- Latest compiled and minified JavaScript -->
