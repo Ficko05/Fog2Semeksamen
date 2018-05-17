@@ -16,12 +16,13 @@ abstract class Command {
     /* */
     private static void initCommands() {
         commands = new HashMap<>();
-        commands.put( "login", new LoginCommand() );
-        commands.put( "CustomerPage" , new CustomerCommand() );
+        commands.put( "login", new LoginCommand() );  
+        commands.put( "logout", new LogoutCommand() );
+        commands.put( "inputPage" , new CustomerCommand() );
         commands.put( "CreateOrderPage" , new CreateOrderCommand());
         commands.put( "RegisterPage" , new RegisterCommand());
         commands.put( "LoginEmployeePage", new LoginEmployeeCommand() );
-        commands.put( "InputPage", new DrawerCommand()  );
+        commands.put( "EmployeePage", new EmployeePageCommand() );
         commands.put( "ShowOrders", new ShowOrdersCommand() );
         commands.put( "ShowCustomerOrders", new ShowCustomerOrdersCommand());
         commands.put( "CreateEmployeePage", new CreateEmployeePageCommand());

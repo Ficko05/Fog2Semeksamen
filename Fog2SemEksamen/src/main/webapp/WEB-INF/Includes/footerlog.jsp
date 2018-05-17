@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <div class="bg-info">
 
-
+        <% request.getSession();%>
         <footer class="page-footer font-small unique-color-dark pt-0">
 
             <div style="background-color: #6351ce;">

@@ -21,7 +21,7 @@ img {
 
     </head>
     <body>
-        
+        <%request.getSession().invalidate();%>
         <%@include file="/WEB-INF/Includes/menu.jsp" %>
 
         <div class="text-center">
