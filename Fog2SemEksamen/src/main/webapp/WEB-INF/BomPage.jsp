@@ -14,34 +14,36 @@
 
     </head>
     <body>
-        <h1>Stykeliste</h1>
-
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>Navn</th>
-                    <th>Antal</th>
-                    <th>    </th>
-                    <th>Beskrivelse</th>
-                </tr>
-            <tbody class="tbodypurchase">
-                <% ArrayList<Material> bom = (ArrayList<Material>) request.getSession().getAttribute("bom");
+        <%@include file="/WEB-INF/Includes/menuemp.jsp" %>
+        <div class="container">
+            <h1>Stykeliste</h1>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Navn</th>
+                        <th>Antal</th>
+                        <th>    </th>
+                        <th>Beskrivelse</th>
+                    </tr>
+                <tbody class="tbodypurchase">
+                    <% ArrayList<Material> bom = (ArrayList<Material>) request.getSession().getAttribute("bom");
                     for (Material mat : bom) {%>
-                <tr>
-                    <th><% out.print(mat.getName());%></th> 
-                    <th><% out.print(mat.getFormat());%></th> 
-                    <th><% out.print(mat.getQuantity());%></th> 
-                    <th><% out.print(mat.getDescription());%></th> 
-                </tr>
-                <% }%>
-            </tbody>
-        </thead>
+                    <tr>
+                        <th><% out.print(mat.getName());%></th> 
+                        <th><% out.print(mat.getFormat());%></th> 
+                        <th><% out.print(mat.getQuantity());%></th> 
+                        <th><% out.print(mat.getDescription());%></th> 
+                    </tr>
+                    <% }%>
+                </tbody>
+                </thead>
 
-    </table>
+            </table>
+        </div>
+        <%@include file="/WEB-INF/Includes/footeremp.jsp" %>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-</body>
+    </body>
 </html>

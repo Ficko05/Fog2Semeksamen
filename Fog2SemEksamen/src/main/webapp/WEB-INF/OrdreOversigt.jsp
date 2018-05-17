@@ -21,7 +21,7 @@
 
         <div class="container">
             <h2>Bordered Table</h2>
-            <p></p>            
+                      
             <table class="table table-bordered">
                 <thead>
                     <tr>
