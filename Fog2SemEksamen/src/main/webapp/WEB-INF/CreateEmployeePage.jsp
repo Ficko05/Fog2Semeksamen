@@ -13,7 +13,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Create Employee</h1>
+        
         <%@include file="/WEB-INF/Includes/menuemp.jsp" %>
 
         <h2>Register new Employee</h2>
@@ -39,6 +39,7 @@
             <br>
             <input type="submit" value="Submit">
         </form>
+        <br><br><br><br><br>
         <%@include file="/WEB-INF/Includes/footeremp.jsp" %>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <!-- Latest compiled and minified JavaScript -->

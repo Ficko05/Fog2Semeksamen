@@ -38,7 +38,7 @@
                         <input type="text" name="email"  placeholder="Email" />
                         <input type="password" name="password"  placeholder="Password" />
                         <br/><br/>
-                        <input class="btn btn-success" type="submit" value="employee" />
+                        <input class="btn btn-success" type="submit" value="Employee" />
                     </form>
                 </div>
 

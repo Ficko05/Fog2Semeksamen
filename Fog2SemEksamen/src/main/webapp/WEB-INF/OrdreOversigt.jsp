@@ -17,7 +17,7 @@
     <body>
         <%@include file="/WEB-INF/Includes/menuemp.jsp" %>
 
-        <h1>odre oversigt</h1>
+        <h1>Ordre oversigt</h1>
 
         <div class="container">
             <h2>Bordered Table</h2>
