@@ -17,12 +17,12 @@
 
         <div class="text-center">
 
-            <h1>kundeside</h1>
+            <h1>Kundeside</h1>
 
             <form name="CustomerPage" action="FrontController" method="post">
                 <input type="hidden" name="command" value="inputPage" />
                 <br/><br/>
-                <input class="btn btn-success" type="submit" value="lav din carport" />
+                <input class="btn btn-success" type="submit" value="Lav din carport" />
             </form>
         </div>
 <div class="container">

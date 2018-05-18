@@ -21,7 +21,7 @@
     <body>
         <%@include file="/WEB-INF/Includes/menulog.jsp" %>
         <div class="center-block">
-            <h1>Inputpage</h1>
+            <h1>Indtast mål</h1>
             <table>
                 <tr>
                     <td>
@@ -40,7 +40,7 @@
                             <br/>
                             <input type="number" name="width" placeholder="minimum 250cm" min="250" > 
                             <br>
-                            roof_id:
+                            Roof_id:
                             <br/>
                             <input type="number" name="roof_id" value="1" placeholder="1" min="1" > 
                             <br>                            

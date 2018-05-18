@@ -13,35 +13,39 @@
     </head>
     <body>
         <%@include file="/WEB-INF/Includes/menuemp.jsp" %>
-        
+
         <div class="text-center">
-            
-        <h1>Employee</h1>
 
-        <form name="CustomerPage" action="FrontController" method="post">
-            <input type="hidden" name="command" value="ShowOrders" />
-            <br/><br/>
-            <input class="btn btn-success" type="submit" value="OrdreOversigt" />
-        </form>
-        <br><br>
+            <h1>Employee</h1>
 
-          
-             
-
-        </form>
-          
-        <form name="EmployeePage" action="FrontController" method="post">
-
-            <input type="hidden" name="command" value="CreateEmployeePage" />
+            <form name="CustomerPage" action="FrontController" method="post">
+                <input type="hidden" name="command" value="ShowOrders" />
+                <br/><br/>
+                <input class="btn btn-success" type="submit" value="OrdreOversigt" />
+            </form>
+            <br><br>
 
 
-            <br/><br/>
+
+
+            </form>
+
+            <form name="EmployeePage" action="FrontController" method="post">
+
+                <input type="hidden" name="command" value="CreateEmployeePage" />
+
+
+                <br/><br/>
                 <input class="btn btn-success" type="submit" value="Create new Employee" />
-        </form>
-            </div>
- 
-        <%@include file="/WEB-INF/Includes/footeremp.jsp" %>
+            </form>
+        </div>
+        <div class="container">
+            
+            <img src="https://www.google.com/search?biw=1366&bih=662&tbm=isch&sa=1&ei=Vq3-Wrm2JIjOwQKiu5j4BQ&q=johannes+fog&oq=johannes&gs_l=img.3.0.35i39k1j0l9.26957.28594.0.29241.8.8.0.0.0.0.196.1015.0j8.8.0....0...1c.1.64.img..0.8.996...0i67k1.0.2pGugtpUrnI#imgrc=rD28IWJ629CotM:" height="200" >
+        </div>
         
+        <%@include file="/WEB-INF/Includes/footeremp.jsp" %>
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

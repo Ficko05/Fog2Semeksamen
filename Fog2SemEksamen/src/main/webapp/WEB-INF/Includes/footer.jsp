@@ -19,7 +19,7 @@
                             <strong>FOG</strong>
                         </h6>
                         <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                        <p>landets bedste carporte</p>
+                        <p>Landets bedste carporte</p>
                     </div>
 
                     <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
@@ -28,7 +28,7 @@
                         </h6>
                         <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
                         <p>
-                            <a href="#!">carporte</a>
+                            <a href="#!">Carporte</a>
                         </p>
 
                     </div>
@@ -39,10 +39,10 @@
                         </h6>
                         <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
                         <p>
-                            <a href="login.jsp">login</a>
+                            <a href="login.jsp">Login</a>
                         </p>
                         <p>
-                            <a href="#!">ledige stillinger</a>
+                            <a href="#!">Ledige stillinger</a>
                         </p>
                         <p>
                             <a href="#!">Help</a>

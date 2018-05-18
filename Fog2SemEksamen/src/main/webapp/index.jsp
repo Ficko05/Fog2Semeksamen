@@ -11,13 +11,14 @@
 
         <!-- Optional theme -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-<style>
-img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-</style>
+
+        <style>
+            img {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        </style>
 
     </head>
     <body>
@@ -32,12 +33,12 @@ img {
         <div class="container">
             <img src="https://solundhuse.dk/wp-content/uploads/2018/01/Karl_2_with_extension_small-1.jpg" alt="karl"  height="500" />
         </div>
-        
+
         <%@include file="/WEB-INF/Includes/footer.jsp" %>
 
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        
+
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     </body>
 </html>
