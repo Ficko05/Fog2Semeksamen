@@ -108,6 +108,18 @@ public class Datamapper {
         
         
     }
+     public static void AcceptOrder (int orderid) throws OrderException{
+        try {
+            Connection con = Connector.connection();
+            String SQL = "Update `order` SET status=? WHERE id =?";
+            PreparedStatement ps = con.prepareStatement( SQL, Statement.RETURN_GENERATED_KEYS );
+            ps.setString( 1, "accepted");
+            ps.setInt(2, orderid);
+            ps.executeUpdate();
+            } catch ( SQLException | ClassNotFoundException ex ) {
+            throw new OrderException(ex.getMessage() );
+            }
+    }
     
 //    /** rigtige løsning på CreateOrder når man kan logge ind*/
 //    public static int customerById( User user ) throws OrderException, ClassNotFoundException
@@ -220,7 +232,27 @@ public class Datamapper {
             throw new LoginSampleException( ex.getMessage() );
         }
     }
-//    
-    
-    
+   public static List<Customer> CustomerInfo() throws OrderException{
+       List<Customer> customerList = new ArrayList<>();
+        try {
+            Connection con = Connector.connection();
+            String SQL = "SELECT * FROM customer";
+            PreparedStatement ps = con.prepareStatement(SQL);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                String username = rs.getString("username");
+                String password = rs.getString("password");
+                String email = rs.getString("email");
+                int phone = rs.getInt("phone");
+                int id = rs.getInt("id");
+                Customer customer = new Customer(id, username, password, email, phone);
+                customerList.add(customer);
+            }
+            return customerList;
+        } catch (ClassNotFoundException | SQLException ex) {
+            throw new OrderException(ex.getMessage());
+        }
+        
+        
+    }
 }

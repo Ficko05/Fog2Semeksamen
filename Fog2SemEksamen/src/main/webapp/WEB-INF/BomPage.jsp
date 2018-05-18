@@ -38,7 +38,12 @@
                 </tbody>
                 </thead>
 
+                
             </table>
+                <%
+                String svg = (String) request.getSession().getAttribute("svg");
+                out.print(svg);
+                %>
         </div>
         <%@include file="/WEB-INF/Includes/footeremp.jsp" %>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

@@ -26,24 +26,57 @@
                 <thead>
                     <tr>
                         <th>Order id</th>
+                        <th>Customer id</th>
                         <th>Height</th>
                         <th>Length</th>
                         <th>Width</th>
                         <th>Date</th>
                         <th>Status</th>
+                        <th>Stykliste</th>
+                        <th>Accepter Ordre</th>
+                        <th>Kunde Information</th>
+                        
+
                     </tr>
                 </thead>
 
                 <tbody class="tbodypurchase">
                     <% List<Order> orders = (List<Order>) request.getSession().getAttribute("orders");
-                        for (Order order : orders) {%>
+                        for (Order order : orders) {
+                    %>
                     <tr>
                         <th><%= order.getId()%></th>
+                        <th><%= order.getCustomer_id()%></th>
                         <th><%= order.getHeight()%></th> 
                         <th><%= order.getLength()%></th> 
                         <th><%= order.getWidth()%></th> 
                         <th><%= order.getDate()%></th>
                         <th><%= order.getStatus()%> </th>
+                     
+                        <th>
+                            <form name="OrdreOversigt" action="FrontController" method="post">
+                        <input type="hidden" name="command" value="Bom" />
+                        <input type="hidden" name="orderid" value="<%=order.getId()%>"/>
+                        <input class="btn btn-success" type="submit" value="Se stykliste" />
+                            </form>
+                            </th>
+                            <th>
+                            <form name="OrdreOversigt" action="FrontController" method="post">
+                        <input type="hidden" name="command" value="Accepter" />
+                        <input type="hidden" name="orderid" value="<%=order.getId()%>"/>
+                        <input class="btn btn-success" type="submit" value="Accepter" />
+                            </form>
+                        
+                            </th>
+                               <th>
+                            <form name="OrdreOversigt" action="FrontController" method="post">
+                        <input type="hidden" name="command" value="CustomerInfo" />
+                        <input type="hidden" name="customerid" value="<%=order.getCustomer_id()%>"/>
+                        <input class="btn btn-success" type="submit" value="se kunde" />
+                            </form>
+                        
+                            </th>
+                            
                     </tr>
                     <% }%>
                 </tbody>

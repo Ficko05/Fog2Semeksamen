@@ -46,7 +46,14 @@ public class LogicFacade {
          Datamapper.createOrder(order, customer_id);
     }
     
-    
+    public static void AcceptOrder(int orderid) throws OrderException{
+         Datamapper.AcceptOrder(orderid);
+    }
+
+    public static List<Customer> CustomerInfo() throws OrderException {
+        return Datamapper.CustomerInfo();
+
+    }
   
 
 }

@@ -3,6 +3,7 @@ package PresentationLayer;
 
 import FunctionLayer.BillOfMaterial;
 import FunctionLayer.Calculator;
+import FunctionLayer.Drawer;
 import FunctionLayer.Order;
 import FunctionLayer.exceptions.LoginSampleException;
 import FunctionLayer.exceptions.OrderException;
@@ -30,6 +31,9 @@ public class BomCommand extends Command {
                 order = liste.get(i);
             }
         }
+        Drawer draw = new Drawer(order);
+        String svg = draw.SVG();
+        session.setAttribute("svg", svg);
         ArrayList bom = billom.makeBom(calc.calculate(order));
         session.setAttribute("bom", bom);
         return "BomPage";

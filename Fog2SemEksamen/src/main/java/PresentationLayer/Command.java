@@ -29,6 +29,8 @@ abstract class Command {
         commands.put( "CreateEmployee", new CreateEmployeeCommand());
         commands.put( "CustomerPageButton", new CustomerPageCommand());
         commands.put( "Bom", new BomCommand() ); 
+        commands.put( "Accepter", new AccepterOrdreCommand());
+        commands.put( "CustomerInfo", new CustomerInfoCommand());
         
     }
 
