@@ -9,6 +9,13 @@
         <!-- Optional theme -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
+        <style>
+            img {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        </style>
         <title>JSP Page</title>
     </head>
     <body>
@@ -39,11 +46,12 @@
                 <input class="btn btn-success" type="submit" value="Create new Employee" />
             </form>
         </div>
+        <br>
         <div class="container">
-            
-            <img src="https://www.google.com/search?biw=1366&bih=662&tbm=isch&sa=1&ei=Vq3-Wrm2JIjOwQKiu5j4BQ&q=johannes+fog&oq=johannes&gs_l=img.3.0.35i39k1j0l9.26957.28594.0.29241.8.8.0.0.0.0.196.1015.0j8.8.0....0...1c.1.64.img..0.8.996...0i67k1.0.2pGugtpUrnI#imgrc=rD28IWJ629CotM:" height="200" >
+
+            <img src="https://www.johannesfog.dk/globalassets/footer-263x175/sporg-fog.jpg" class="center" height="200" >
         </div>
-        
+        <br>
         <%@include file="/WEB-INF/Includes/footeremp.jsp" %>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

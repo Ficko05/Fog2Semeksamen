@@ -25,10 +25,11 @@
                         <th>Width</th>
                         <th>Date</th>
                         <th>Status</th>
+                        <th>Se carport</th>
                     </tr>
                 </thead>
                 <tbody class="tbodypurchase">
-                    <% List<Order> orders = (List<Order>) request.getAttribute("CustomerOrders");
+                    <% List<Order> orders = (List<Order>) session.getAttribute("CustomerOrders");
                         for (Order order : orders) {%>
                     <tr>
                         <th><%= order.getId()%></th>
@@ -37,7 +38,13 @@
                         <th><%= order.getWidth()%></th> 
                         <th><%= order.getDate()%></th>
                         <th><%= order.getStatus()%> </th>
-
+                        <th>
+                            <form name="CustomerOrders" action="FrontController" method="post">
+                        <input type="hidden" name="command" value="DrawingPage" />
+                        <input type="hidden" name="orderid" value="<%=order.getId()%>"/>
+                        <input class="btn btn-success" type="submit" value="Se carport" />
+                            </form>
+                            </th>
 
                     </tr>
                     <% }%>

@@ -31,6 +31,7 @@ abstract class Command {
         commands.put( "Bom", new BomCommand() ); 
         commands.put( "Accepter", new AccepterOrdreCommand());
         commands.put( "CustomerInfo", new CustomerInfoCommand());
+        commands.put( "DrawingPage", new DrawingPageCommand()) ;
         
     }
 
