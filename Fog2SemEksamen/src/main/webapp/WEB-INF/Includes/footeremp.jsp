@@ -28,7 +28,7 @@
                         </h6>
                         <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
                         <p>
-                            <a href="#!">Carporte</a>
+                            <a href="https://www.johannesfog.dk/byggecenter/have--fritid/byg-selv-produkter/?id=31893">Carporte</a>
                         </p>
 
                     </div>
@@ -41,7 +41,7 @@
 
 
                         <p>
-                            <a href="#!">Help</a>
+                            <a href="https://www.johannesfog.dk/byggecenter/hvordan-kober-jeg/ofte-stillede-sporgsmal/">Help</a>
                         </p>
                     </div>
 
