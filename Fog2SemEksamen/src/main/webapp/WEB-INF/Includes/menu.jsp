@@ -10,6 +10,7 @@
       <%request.getSession().invalidate();%> 
 
       <li><a href="login.jsp"> Login</a></li>
+      <li><a href="Employeelogin.jsp"> Emplayee Login</a></li>
       
     </ul>
   </div>

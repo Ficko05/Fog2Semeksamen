@@ -31,16 +31,7 @@
                         <input class="btn btn-success" type="submit" value="Login" />
                     </form>
                 </div>
-                <div class="col-lg-4 "
-                     <br><br>
-                    <form name="EmployeePage" action="FrontController" method="post">
-                        <input type="hidden" name="command" value="LoginEmployeePage" />
-                        <input type="text" name="email"  placeholder="Email" />
-                        <input type="password" name="password"  placeholder="Password" />
-                        <br/><br/>
-                        <input class="btn btn-success" type="submit" value="Employee" />
-                    </form>
-                </div>
+                
 
                 <div class="col-lg-4 "
                      <h2>Register</h2>
