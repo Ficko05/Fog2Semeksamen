@@ -20,8 +20,8 @@
         <h1>Ordre oversigt</h1>
 
         <div class="container">
-            <h2>Bordered Table</h2>
-                      
+            <h2></h2>
+
             <table class="table table-bordered">
                 <thead>
                     <tr>
@@ -35,7 +35,7 @@
                         <th>Stykliste</th>
                         <th>Accepter Ordre</th>
                         <th>Kunde Information</th>
-                        
+
 
                     </tr>
                 </thead>
@@ -52,53 +52,46 @@
                         <th><%= order.getWidth()%></th> 
                         <th><%= order.getDate()%></th>
                         <th><%= order.getStatus()%> </th>
-                     
+
                         <th>
                             <form name="OrdreOversigt" action="FrontController" method="post">
-                        <input type="hidden" name="command" value="Bom" />
-                        <input type="hidden" name="orderid" value="<%=order.getId()%>"/>
-                        <input class="btn btn-success" type="submit" value="Se stykliste" />
+                                <input type="hidden" name="command" value="Bom" />
+                                <input type="hidden" name="orderid" value="<%=order.getId()%>"/>
+                                <input class="btn btn-success" type="submit" value="Se stykliste" />
                             </form>
-                            </th>
-                            <th>
+                        </th>
+                        <th>
                             <form name="OrdreOversigt" action="FrontController" method="post">
-                        <input type="hidden" name="command" value="Accepter" />
-                        <input type="hidden" name="orderid" value="<%=order.getId()%>"/>
-                        <input class="btn btn-success" type="submit" value="Accepter" />
+                                <input type="hidden" name="command" value="Accepter" />
+                                <input type="hidden" name="orderid" value="<%=order.getId()%>"/>
+                                <input class="btn btn-success" type="submit" value="Accepter" />
                             </form>
-                        
-                            </th>
-                               <th>
+
+                        </th>
+                        <th>
                             <form name="OrdreOversigt" action="FrontController" method="post">
-                        <input type="hidden" name="command" value="CustomerInfo" />
-                        <input type="hidden" name="customerid" value="<%=order.getCustomer_id()%>"/>
-                        <input class="btn btn-success" type="submit" value="se kunde" />
+                                <input type="hidden" name="command" value="CustomerInfo" />
+                                <input type="hidden" name="customerid" value="<%=order.getCustomer_id()%>"/>
+                                <input class="btn btn-success" type="submit" value="se kunde" />
                             </form>
-                        
-                            </th>
-                            
+
+                        </th>
+
                     </tr>
                     <% }%>
                 </tbody>
             </table>
         </div>
-        <form name="OrdreOversigt" action="FrontController" method="post">
-            <input type="hidden" name="command" value="Bom" />
-            <input type="number" name="orderid" placeholder="Vælg et ordre nr">
-            <input class="btn btn-success" type="submit" value="Se stykliste" />
-        </form>
-
-    </table>
-    <br><br>
+        <br><br>
 
 
 
-    
-    <%@include file="/WEB-INF/Includes/footeremp.jsp" %>
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-</body>
+        <%@include file="/WEB-INF/Includes/footeremp.jsp" %>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    </body>
 </html>

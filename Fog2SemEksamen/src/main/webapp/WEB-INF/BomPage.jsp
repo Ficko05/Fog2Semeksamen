@@ -1,4 +1,5 @@
 
+<%@page import="FunctionLayer.Order"%>
 <%@page import="FunctionLayer.BillOfMaterial.Material"%>
 <%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -16,7 +17,8 @@
     <body>
         <%@include file="/WEB-INF/Includes/menuemp.jsp" %>
         <div class="container">
-            <h1>Stykeliste</h1>
+            <% Order order = (Order) request.getSession().getAttribute("order");%>
+            <h1>Stykeliste for Order nr. <%=order.getId()%></h1>
             <table class="table table-bordered">
                 <thead>
                     <tr>

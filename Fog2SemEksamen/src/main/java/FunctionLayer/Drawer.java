@@ -14,7 +14,7 @@ public class Drawer {
     }
 
     public String SVG() {
-        String svgStart = "<svg width=\"" + (order.getLength() + 100) + "\" height=\"" + (order.getWidth() + 100) + "\">";
+        String svgStart = "<svg width=\"" + (order.getLength() + 100) + "\" height=\"" + (order.getWidth() + 100) + "\" viewBox=\"0 0 500 400\">";
         String tag = tag();
         String rem = rem();
         String stolpe = placeStolpe();

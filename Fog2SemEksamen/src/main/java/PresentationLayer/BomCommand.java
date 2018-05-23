@@ -36,6 +36,7 @@ public class BomCommand extends Command {
         session.setAttribute("svg", svg);
         ArrayList bom = billom.makeBom(calc.calculate(order));
         session.setAttribute("bom", bom);
+        session.setAttribute("order", order);
         return "BomPage";
     }
 
