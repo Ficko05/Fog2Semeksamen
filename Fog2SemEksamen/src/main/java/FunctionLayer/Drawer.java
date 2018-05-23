@@ -14,7 +14,7 @@ public class Drawer {
     }
 
     public String SVG() {
-        String svgStart = "<svg width=\"" + (order.getLength() + 100) + "\" height=\"" + (order.getWidth() + 100) + "\" viewBox=\"0 0 500 400\">";
+        String svgStart = "<svg width=\"780\" height=\"600\" viewBox=\"0 0 " + (order.getLength() + 100) + " " + (order.getWidth() + 100) + "\">";
         String tag = tag();
         String rem = rem();
         String stolpe = placeStolpe();
@@ -133,8 +133,8 @@ public class Drawer {
     }
 
     private String mål() {
-        String horri = "<text x=\"" + ((order.getLength()/100)*46) + "\"  y=\"" + (order.getWidth() + 30) + "\" >Længde:" + order.getLength() + "</text>";
-        String verti = "<text x=\"" + (order.getLength() + 30) + "\" y=\"" + ((order.getWidth()/100)*46) + "\" style=\"writing-mode: tb; glyph-orientation-vertical: 0;\"> Brede:" + order.getWidth() + " </text>";
+        String horri = "<text x=\"" + ((order.getLength() / 100) * 46) + "\"  y=\"" + (order.getWidth() + 30) + "\" >Længde:" + order.getLength() + "</text>";
+        String verti = "<text x=\"" + (order.getLength() + 30) + "\" y=\"" + ((order.getWidth() / 100) * 46) + "\" style=\"writing-mode: tb; glyph-orientation-vertical: 0;\"> Brede:" + order.getWidth() + " </text>";
         return horri + verti;
     }
 }
