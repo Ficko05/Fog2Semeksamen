@@ -1,7 +1,7 @@
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <header>
-           
+
             <%@page import="FunctionLayer.Employee"%>
 
             <%Employee emp = (Employee) session.getAttribute("employee");%>
@@ -13,16 +13,18 @@
                 <% if (emp != null) { %>
                 <li><a href="FrontController?command=EmployeePage">Min Side</a></li>
                     <% }%>
+                
+                <li><a href="FrontController?command=ShowOrders">Alle Ordre</a></li>
+                
                     <% if (emp == null) { %>
                 <li>        <a href="FrontController?command=login">Login</a></li>
                     <% } else { %>
-                
-                <li> <a href="index.jsp">Logud</a></li>
-                
-                    <% }%>
-                
 
-                <li><a href="FrontController?command=ShowOrders"> Ordre</a></li>
+                <li> <a href="index.jsp">Logud</a></li>
+
+                <% }%>
+
+
             </ul>
         </header>
     </div>

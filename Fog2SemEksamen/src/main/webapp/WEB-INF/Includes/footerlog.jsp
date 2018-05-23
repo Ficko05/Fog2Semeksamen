@@ -39,9 +39,6 @@
                         </h6>
                         <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
                         <p>
-                            <a href="inputPage.jsp">Input</a>
-                        </p>
-                        <p>
                             <a href="https://www.johannesfog.dk/byggecenter/om-fog/job/">Ledige stillinger</a>
                         </p>
                         <p>

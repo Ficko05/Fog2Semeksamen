@@ -13,6 +13,7 @@
                 <% if (cust != null) { %>
                 <li><a href="FrontController?command=CustomerPageButton">Min Side</a></li>
                     <% }%>
+                <li><a href="FrontController?command=ShowCustomerOrders"> Mine Ordre</a></li>
                     <% if (cust == null) { %>
                 <li>        <a href="FrontController?command=login">Login</a></li>
                     <% }  if(cust != null) { %>
@@ -23,7 +24,6 @@
                 <% }%>
 
 
-                <li><a href="FrontController?command=ShowCustomerOrders"> Mine ordre</a></li>
             </ul>
         </header>
     </div>

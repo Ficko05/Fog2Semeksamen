@@ -133,8 +133,8 @@ public class Drawer {
     }
 
     private String mål() {
-        String horri = "<text x=\"" + (order.getLength() / 2) + "\"  y=\"" + (order.getWidth() + 30) + "\" >Længde:" + order.getLength() + "</text>";
-        String verti = "<text x=\"" + (order.getLength() + 30) + "\" y=\"" + (order.getWidth() / 2) + "\" style=\"writing-mode: tb; glyph-orientation-vertical: 0;\"> Brede:" + order.getWidth() + " </text>";
+        String horri = "<text x=\"" + ((order.getLength()/100)*46) + "\"  y=\"" + (order.getWidth() + 30) + "\" >Længde:" + order.getLength() + "</text>";
+        String verti = "<text x=\"" + (order.getLength() + 30) + "\" y=\"" + ((order.getWidth()/100)*46) + "\" style=\"writing-mode: tb; glyph-orientation-vertical: 0;\"> Brede:" + order.getWidth() + " </text>";
         return horri + verti;
     }
 }
