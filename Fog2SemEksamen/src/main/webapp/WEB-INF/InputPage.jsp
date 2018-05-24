@@ -45,7 +45,7 @@
                                 <br/>
                                 <input type="number" name="roof_id" value="1" placeholder="1" min="1" > 
                                 <br>                            
-                                <input type="submit" value="submit">
+                                <input class="btn btn-success" type="submit" value="submit">
                                 <br/>
                             </form>
                         </td>
@@ -53,7 +53,7 @@
                 </table>
             </div>
         </div>
-        <br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         <%@include file="/WEB-INF/Includes/footerlog.jsp" %>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

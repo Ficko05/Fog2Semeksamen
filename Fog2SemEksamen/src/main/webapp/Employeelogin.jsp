@@ -15,7 +15,7 @@
 
         <div class="container">
             <div class="col-lg-4 ">
-        <h1>Employee Login</h1>
+                <h1>Employee Login</h1>
                 <br>
                 <form name="EmployeePage" action="FrontController" method="post">
                     <input type="hidden" name="command" value="LoginEmployeePage" />
@@ -27,11 +27,11 @@
             </div>
         </div>
         <br>
-        <div class="container">
-            
+        <div class="container" height="100%" width="100%">
+
             <img src="https://www.johannesfog.dk/globalassets/footer-263x175/sporg-fog.jpg" alt="karl" height="300" >
         </div>
-
+        <br><br><br><br>
 
         <%@include file="/WEB-INF/Includes/footer.jsp" %>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

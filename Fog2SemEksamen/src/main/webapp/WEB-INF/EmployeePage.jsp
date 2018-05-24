@@ -51,7 +51,7 @@
 
             <img src="https://www.johannesfog.dk/globalassets/footer-263x175/sporg-fog.jpg" class="center" height="200" >
         </div>
-        <br>
+        <br><br><br><br><br><br><br>
         <%@include file="/WEB-INF/Includes/footeremp.jsp" %>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

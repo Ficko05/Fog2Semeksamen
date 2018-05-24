@@ -19,18 +19,19 @@
                 margin-right: auto;
             }
         </style>
+        
 
     </head>
     <body>
         <%request.getSession().invalidate();%>
         <%@include file="/WEB-INF/Includes/menu.jsp" %>
 
-        <div class="text-center">
-            <h2>Welcome!</h2>        
+        <div class="text-center" height="100%" width="100%">
+            <img src="http://shop.johannesfog.dk/gfx/foglogok.png" height="200"/>        
         </div>
 
 
-        <div class="container">
+        <div class="container" height="100%" width="100%">
             <img src="https://solundhuse.dk/wp-content/uploads/2018/01/Karl_2_with_extension_small-1.jpg" alt="karl"  height="500" />
         </div>
 

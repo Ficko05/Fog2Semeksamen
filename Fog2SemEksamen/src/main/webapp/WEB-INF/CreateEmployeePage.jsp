@@ -13,33 +13,35 @@
         <title>JSP Page</title>
     </head>
     <body>
-        
-        <%@include file="/WEB-INF/Includes/menuemp.jsp" %>
 
-        <h2>Register new Employee</h2>
-        <form name="CreateEmployeePage" action="FrontController" method="POST">
-            <input type="hidden" name="command" value="CreateEmployee">
-            Name:<br>
-            <input type="text" name="username" value="">
-            <br>
-            Email:<br>
-            <input type="text" name="email" value="@Fog.com">
-            <br>
-            Phone:<br>
-            <input type="text" name="phone" value="">
-            <br>
-            Cpr:<br>
-            <input type="text" name="cpr" value="">
-            <br>
-            Password:<br>
-            <input type="password" name="password1" value="">
-            <br>
-            Retype Password:<br>
-            <input type="password" name="password2" value="">
-            <br>
-            <input type="submit" value="Submit">
-        </form>
-        <br><br><br><br><br>
+        <%@include file="/WEB-INF/Includes/menuemp.jsp" %>
+        <div class="container">
+
+            <h2>Register new Employee</h2>
+            <form name="CreateEmployeePage" action="FrontController" method="POST">
+                <input type="hidden" name="command" value="CreateEmployee">
+                Name:<br>
+                <input type="text" name="username" value="">
+                <br>
+                Email:<br>
+                <input type="text" name="email" value="@Fog.com">
+                <br>
+                Phone:<br>
+                <input type="text" name="phone" value="">
+                <br>
+                Cpr:<br>
+                <input type="text" name="cpr" value="">
+                <br>
+                Password:<br>
+                <input type="password" name="password1" value="">
+                <br>
+                Retype Password:<br>
+                <input type="password" name="password2" value="">
+                <br>
+                <input class="btn btn-success" type="submit" value="submit">
+            </form>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         <%@include file="/WEB-INF/Includes/footeremp.jsp" %>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <!-- Latest compiled and minified JavaScript -->
