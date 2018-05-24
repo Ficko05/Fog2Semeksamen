@@ -19,7 +19,7 @@ import java.sql.Timestamp;
 
 public class Datamapper {
    
-    /**puts values into OrderDB*/
+    /**creates new order in database*/
     public static void createOrder (Order order, int customer_id) throws OrderException{
         try {
             Connection con = Connector.connection();
@@ -34,10 +34,6 @@ public class Datamapper {
             ps.setInt( 3, length);
             ps.setInt( 4, width);
             ps.setInt( 5, roofId);
-//            ps.setInt( 6, order.getShed_id());
-//            ps.setString( 7, order.getCustomer_comment());
-//            ps.setString( 7, order.getStatus());
-//            ps.setString( 8, order.getType());
             
             ps.executeUpdate();
             } catch ( SQLException | ClassNotFoundException ex ) {
@@ -46,7 +42,7 @@ public class Datamapper {
     }
 
 
-/** takes all orders from database and puts in an List*/
+/** Retrieves all orders from database and puts in an List*/
     public static List<Order> allOrders() throws OrderException{
            List<Order> orderList = new ArrayList<>();
         try {
@@ -77,6 +73,8 @@ public class Datamapper {
         
         
     }
+    
+    /**Retrieves all Orders from database with the same customer_id as the customer logged in */
      public static List<Order> CustomerOrders(Customer customer) throws OrderException{
            List<Order> orderList = new ArrayList<>();
         try {
@@ -108,6 +106,8 @@ public class Datamapper {
         
         
     }
+     
+     /**Changes status on order from waiting to accepted */
      public static void AcceptOrder (int orderid) throws OrderException{
         try {
             Connection con = Connector.connection();
@@ -120,28 +120,10 @@ public class Datamapper {
             throw new OrderException(ex.getMessage() );
             }
     }
-    
-//    /** rigtige løsning på CreateOrder når man kan logge ind*/
-//    public static int customerById( User user ) throws OrderException, ClassNotFoundException
-//    {
-//        String username = user.getUsername();
-//        final String SQL = "Select * FROM customer WHERE username=?";
-//        try(PreparedStatement statement = Connector.connection().prepareStatement(SQL)) 
-//        {
-//            statement.setString(1, username);
-//            ResultSet rs = statement.executeQuery();
-//            if(rs.next()) {
-//                int idUser = rs.getInt("id");
-//                return idUser;
-//            }
-//            throw new SQLException();
-//        } catch (SQLException | ClassNotFoundException throwSql) {
-//            throw new OrderException(throwSql.getMessage());
-//        }
-//    }
 
 
 
+/**Creates a Customer in the database */
     public static void createCustomer( Customer customer ) throws LoginSampleException {
         try {
             Connection con = Connector.connection();
@@ -161,6 +143,7 @@ public class Datamapper {
         }
     }
     
+        /**Checks for the email and password in the customer table in database sets new customer with the details else throws an loginSampleException*/
     public static Customer login( String email, String password ) throws LoginSampleException {
         try {
             Connection con = Connector.connection();
@@ -186,6 +169,7 @@ public class Datamapper {
             throw new LoginSampleException(ex.getMessage());
         }
     }
+    /**Checks that the email and password are in the employee database sets new emlpoyee with the details else throws an loginSampleException*/
      public static Employee loginEmployee( String email, String password ) throws LoginSampleException {
         try {
             Connection con = Connector.connection();
@@ -213,6 +197,7 @@ public class Datamapper {
         }
     }
     
+     /**Creates an employee in the database */
     public static void createEmployee( Employee employee ) throws LoginSampleException {
         try {
               Connection con = Connector.connection();
@@ -232,6 +217,7 @@ public class Datamapper {
             throw new LoginSampleException( ex.getMessage() );
         }
     }
+    /**Retrieves all customer information from database and adds them into the List customerList*/
    public static List<Customer> CustomerInfo() throws OrderException{
        List<Customer> customerList = new ArrayList<>();
         try {

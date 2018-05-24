@@ -7,6 +7,7 @@ import FunctionLayer.Order;
 import FunctionLayer.exceptions.LoginSampleException;
 import FunctionLayer.exceptions.OrderException;
 import java.io.IOException;
+import java.util.Comparator;
 import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -24,6 +25,8 @@ public class ShowCustomerOrdersCommand extends Command {
         List<Order> orders;
 
         orders =LogicFacade.CustomerOrders(customer);
+        Comparator<Order> dateComparator = (o1, o2) -> o2.getDate().compareTo(o1.getDate());
+        orders.sort(dateComparator);
         session.setAttribute("CustomerOrders", orders);
 
         return "CustomerOrdreOversigt";
