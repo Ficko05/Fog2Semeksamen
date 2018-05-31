@@ -28,12 +28,11 @@ public class Datamapper {
             int height = order.getHeight();
             int length = order.getLength();
             int width = order.getWidth();
-            int roofId = order.getRoof_id();
             ps.setInt( 1, customer_id);
             ps.setInt( 2, height);
             ps.setInt( 3, length);
             ps.setInt( 4, width);
-            ps.setInt( 5, roofId);
+            ps.setInt( 5, 1);
             
             ps.executeUpdate();
             } catch ( SQLException | ClassNotFoundException ex ) {

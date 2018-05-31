@@ -28,11 +28,10 @@ public class Order {
     }
     
     /**quick fix */
-    public Order(int length, int width, int height, int roof_id){
+    public Order(int length, int width, int height){
         this.length = length;
         this.width = width;
         this.height = height;
-        this.roof_id = roof_id;
     }
 
     public int getId() {

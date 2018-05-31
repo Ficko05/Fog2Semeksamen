@@ -40,11 +40,7 @@
                                 Width:
                                 <br/>
                                 <input type="number" name="width" placeholder="minimum 250cm" min="250" > 
-                                <br>
-                                Roof_id:
-                                <br/>
-                                <input type="number" name="roof_id" value="1" placeholder="1" min="1" > 
-                                <br>                            
+                                <br>                 
                                 <input class="btn btn-success" type="submit" value="submit">
                                 <br/>
                             </form>

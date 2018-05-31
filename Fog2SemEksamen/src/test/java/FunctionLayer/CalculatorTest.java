@@ -18,7 +18,7 @@ public class CalculatorTest {
     @Test
     public void testCalculate() {
         Calculator calc = new Calculator();
-        Order order = new Order(-800,600,200,1);
+        Order order = new Order(-800,600,200);
         Carport result = calc.calculate(order);
         assertEquals(result.getSpær(),14);
         assertEquals(result.getStolpeL(),8);

@@ -21,8 +21,7 @@ public class CreateOrderCommand extends Command {
         int height = Integer.parseInt(request.getParameter("height"));
         int length = Integer.parseInt(request.getParameter("length"));
         int width = Integer.parseInt(request.getParameter("width"));
-        int roof_id = Integer.parseInt(request.getParameter("roof_id"));
-        Order o = new Order(length, width, height, roof_id);;
+        Order o = new Order(length, width, height);;
         Drawer draw = new Drawer(o);
         String svg = draw.SVG();
         session.setAttribute("svg", svg);
