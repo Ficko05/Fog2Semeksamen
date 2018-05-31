@@ -25,7 +25,7 @@ public class ShowCustomerOrdersCommand extends Command {
         List<Order> orders;
 
         orders =LogicFacade.CustomerOrders(customer);
-        Comparator<Order> dateComparator = (o1, o2) -> o2.getDate().compareTo(o1.getDate());
+        Comparator<Order> dateComparator = (o1, o2) -> o2.getId()-(o1.getId());
         orders.sort(dateComparator);
         session.setAttribute("CustomerOrders", orders);
 

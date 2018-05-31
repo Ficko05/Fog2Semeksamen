@@ -17,7 +17,7 @@ public class ShowOrdersCommand extends Command {
         List<Order> orders;
         HttpSession session = request.getSession();
         orders =LogicFacade.allOrders();
-        Comparator<Order> dateComparator = (o1, o2) -> o2.getDate().compareTo(o1.getDate());
+        Comparator<Order> dateComparator = (o1, o2) -> o2.getId()-(o1.getId());
         orders.sort(dateComparator);
         session.setAttribute("orders", orders);
 
