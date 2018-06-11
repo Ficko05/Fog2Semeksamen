@@ -2,7 +2,7 @@
 eksamens projekt til 2 semester 
 
 Linket til demo i rapporten virker ikke dette er det rigtige:
-http://159.89.10.139/Fog2SemEksame:n-1.0-SNAPSHOT/
+http://159.89.10.139/Fog2SemEksamen-1.0-SNAPSHOT/
 
 Employee User:
 
