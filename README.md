@@ -1,6 +1,9 @@
 # Fog2Semeksamen
 eksamens projekt til 2 semester 
 
+Linket til demo i rapporten virker ikke dette er det rigtige:
+http://159.89.10.139/Fog2SemEksame:n-1.0-SNAPSHOT/
+
 Employee User:
 
 (Email) [password] (Test@Fog.com) [1234]
@@ -20,4 +23,3 @@ Developers Git-Hub navne:
 Darkplz
 Ficko05
 draco1703
-
