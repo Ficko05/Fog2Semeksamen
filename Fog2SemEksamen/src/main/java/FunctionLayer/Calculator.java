@@ -24,7 +24,7 @@ public class Calculator {
         u19 = (spær*2);
         bolt1012 = (stolpeL + stolpeW);
         firkantskiver404011 = (stolpeL + stolpeW);
-        
+
         return new Carport(stolpeL, stolpeW, rem, spær, u19, bolt1012, firkantskiver404011);
     }
 

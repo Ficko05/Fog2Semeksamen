@@ -70,7 +70,9 @@
                                         </form>                
                                     </div>
                                     <div class="tab-pane fade" id="create">
-                                        <form id="tab">
+                                        <form name="create" class="form-horizontal" action="FrontController" method="POST">
+                                            <input type="hidden" name="command" value="RegisterPage" />
+                                            
                                             <label>Full name</label>
                                             <input type="text" value="" name="username" class="input-xlarge" >
                                             <label>Email</label>
@@ -78,12 +80,12 @@
                                             <label>Phone</label>
                                             <input type="text" value="" name="phone" class="input-xlarge">
                                             <label>Password</label>
-                                            <input type="Password" value="" name="pasword1" class="input-xlarge">
+                                            <input type="Password" value="" name="password1" class="input-xlarge">
                                             <label>Retype Password</label>
-                                            <input type="Password" value="" name="pasword2" class="input-xlarge">
+                                            <input type="Password" value="" name="password2" class="input-xlarge">
 
                                             <div>
-                                                <button class="btn btn-primary">Create Account</button>
+                                                <button type="submit" class="btn btn-primary">Create Account</button>
                                             </div>
                                         </form>
                                     </div>
