@@ -12,6 +12,7 @@ import FunctionLayer.Order;
 import FunctionLayer.exceptions.LoginSampleException;
 import FunctionLayer.exceptions.OrderException;
 import java.io.IOException;
+import java.util.Comparator;
 import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -31,6 +32,8 @@ public class AccepterOrdreCommand extends Command {
         try {
             LogicFacade.AcceptOrder(orderid);
             List<Order> orders = LogicFacade.allOrders();
+            Comparator<Order> dateComparator = (o1, o2) -> o2.getId()-(o1.getId());
+        orders.sort(dateComparator);
            session.setAttribute("orders", orders);
         } catch (OrderException ex) {
             throw new OrderException("could not save order");
